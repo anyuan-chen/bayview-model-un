@@ -8,6 +8,9 @@ module.exports = {
         display: ["Lora"],
         body: ["Nunito"],
       },
+      colors: {
+        main: "#428FDF",
+      },
     },
   },
   variants: {
