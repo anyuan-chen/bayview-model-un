@@ -18,7 +18,7 @@ export default function Team() {
       <div className="h-40 bg-main flex items-center justify-center">
         <h1 className="text-white font-body text-3xl"> Our Team</h1>
       </div>
-      <div>{teamMembers}</div>
+      <div className="mx-64 mt-8 grid grid-cols-2 gap-10">{teamMembers}</div>
     </div>
   );
 }
