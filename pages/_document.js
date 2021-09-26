@@ -14,7 +14,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
             rel="stylesheet"
           />
-
+          <link href="/"></link>
           <link
             href="https://fonts.googleapis.com/css2?family=Lora&display=optional"
             rel="stylesheet"

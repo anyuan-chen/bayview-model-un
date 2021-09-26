@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
-
+import Router from "next/router";
 export default function Home() {
+  const redirectMail = () => {
+    Router.push('/mailing')
+  };
   return (
     <div>
       <Head>
@@ -13,8 +16,10 @@ export default function Home() {
         <Navbar></Navbar>
         <div>
           <div className="flex items-center h-96 bg-main space-evenly justify-evenly flex-col">
-            <h3 className="font-body text-white text-3xl">Debate. Delegate. Inspire.</h3>
-            <button className="px-16 py-2 bg-white">
+            <h3 className="font-body text-white text-3xl">
+              Debate. Delegate. Inspire.
+            </h3>
+            <button className="px-16 py-2 bg-white" onClick={redirectMail}>
               Join Us
             </button>
           </div>

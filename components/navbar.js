@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Hamburger from "./hamburger";
+import Link from "next/link";
 
 export default function Navbar() {
   const [sideBar, setsideBar] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
           <rect y="40" width="80" height="10"></rect>
         </svg>
       </div>
-      <div className="justify-self-center py-3">
+      <div className="justify-self-center self-center">
         <h1>Bayview Model UN</h1>
       </div>
       {sideBar === true && (
@@ -41,12 +41,22 @@ export default function Navbar() {
                 ></rect>
               </svg>
             </div>
-            <div className="space-y-10 font-body text-xl pl-4">
-              <h3>home</h3>
-              <h3>about us</h3>
-              <h3>our team</h3>
-              <h3>mailing list</h3>
-              <h3>contact</h3>
+            <div className="space-y-10 font-body text-xl pl-4 flex flex-col">
+              <Link href="/">
+                <a>home</a>
+              </Link>
+              <Link href="/about">
+                <a>about us</a>
+              </Link>
+              <Link href="/team">
+                <a>our team</a>
+              </Link>
+              <Link href="/mailing">
+                <a>mailing list</a>
+              </Link>
+              <Link href="/contact">
+                <a>contact</a>
+              </Link>
             </div>
           </div>
         </div>
