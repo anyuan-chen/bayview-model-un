@@ -1,13 +1,36 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
 export default function Mailing() {
-  const addToMailingList = (event) => {
+  const addToMailingList = async (event) => {
     event.preventDefault();
+
+    const client_email =
+      process.env.GOOGLE_APPLICATION_CREDENTIALS.client_email;
+    const private_key = process.env.GOOGLE_APPLICATION_CREDENTIALS.private_key;
+    const doc = new GoogleSpreadsheet(process.env.SPEADSHEET_ID);
+
+    await doc.useServiceAccountAuth({
+      client_email: client_email,
+      private_key: private_key,
+    });
+    await doc.loadInfo();
+
+    const sheet = doc.sheetsByID[process.env.SHEET_ID];
+    await sheet.addRow({
+      Timestamp: new Date().getTime(),
+      "Email Address (Personal)": email,
+      "Name (First and Last)": name,
+      "Student Number": stuNum,
+      Grade: grade,
+    });
   };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [stuNum, setstuNum] = useState("");
+  const [grade, setGrade] = useState("");
 
   return (
     <div className="h-screen">
@@ -45,6 +68,26 @@ export default function Mailing() {
                   className=""
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
+                ></input>
+              </div>
+              <div className="flex flex-col">
+                <label for="name">grade</label>
+                <input
+                  type="text"
+                  name="grade"
+                  className=""
+                  value={grade}
+                  onChange={(event) => setGrade(event.target.value)}
+                ></input>
+              </div>
+              <div className="flex flex-col">
+                <label for="name">student number</label>
+                <input
+                  type="text"
+                  name="student number"
+                  className=""
+                  value={stuNum}
+                  onChange={(event) => setstuNum(event.target.value)}
                 ></input>
               </div>
               <button type="submit" className="border border-black py-2">
