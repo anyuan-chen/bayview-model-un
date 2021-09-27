@@ -23,7 +23,7 @@ export default function Navbar() {
       </div>
       {sideBar === true && (
         <div className="col-start-1 row-start-1 col-span-1 row-span-1 absolute w-96 text-white shadow-xl">
-          <div className=" space-y-5 h-screen bg-main">
+          <div className=" space-y-5 h-screen bg-sub">
             <div onClick={toggleSidebar} className="px-12 py-6">
               <svg viewBox="0 0 100 80" width="40" height="40">
                 <rect width="80" height="10" style={{ fill: "white" }}></rect>

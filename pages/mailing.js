@@ -44,7 +44,7 @@ export default function Mailing() {
         </div>
         <div className="">
           <form onSubmit={addToMailingList} className=" flex justify-center">
-            <div className="w-8/12 flex flex-col space-y-8 pt-64">
+            <div className="w-8/12 flex flex-col space-y-8 pt-32">
               <div className="flex flex-col">
                 <label for="name">name</label>
                 <input

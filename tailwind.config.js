@@ -10,6 +10,13 @@ module.exports = {
       },
       colors: {
         main: "#428FDF",
+        sub: "#548CD9",
+      },
+      height: {
+        "screen/2": "50vh",
+        "screen/3": "33vh",
+        "screen/4": "25vh",
+        "screen/5": "20vh",
       },
     },
   },
