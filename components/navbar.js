@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="grid grid-cols-3">
       <div
-        className="px-4 col-start-1 row-start-1 py-3"
+        className="px-12 col-start-1 row-start-1 py-6"
         onClick={toggleSidebar}
       >
         <svg viewBox="0 0 100 80" width="40" height="40">
@@ -22,9 +22,9 @@ export default function Navbar() {
         <h1>Bayview Model UN</h1>
       </div>
       {sideBar === true && (
-        <div className="col-start-1 row-start-1 col-span-1 row-span-1 absolute w-64 text-white">
-          <div className=" space-y-5 h-screen bg-main ">
-            <div onClick={toggleSidebar} className="px-4 py-3">
+        <div className="col-start-1 row-start-1 col-span-1 row-span-1 absolute w-96 text-white shadow-xl">
+          <div className=" space-y-5 h-screen bg-main">
+            <div onClick={toggleSidebar} className="px-12 py-6">
               <svg viewBox="0 0 100 80" width="40" height="40">
                 <rect width="80" height="10" style={{ fill: "white" }}></rect>
                 <rect
@@ -41,7 +41,7 @@ export default function Navbar() {
                 ></rect>
               </svg>
             </div>
-            <div className="space-y-10 font-body text-xl pl-4 flex flex-col">
+            <div className="space-y-10 font-body text-xl pl-12  flex flex-col">
               <Link href="/">
                 <a>home</a>
               </Link>

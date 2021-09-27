@@ -1,37 +1,32 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
-import { GoogleSpreadsheet } from "google-spreadsheet";
+import useSWR from "swr";
 
 export default function Mailing() {
   const addToMailingList = async (event) => {
     event.preventDefault();
-
-    const client_email =
-      process.env.GOOGLE_APPLICATION_CREDENTIALS.client_email;
-    const private_key = process.env.GOOGLE_APPLICATION_CREDENTIALS.private_key;
-    const doc = new GoogleSpreadsheet(process.env.SPEADSHEET_ID);
-
-    await doc.useServiceAccountAuth({
-      client_email: client_email,
-      private_key: private_key,
-    });
-    await doc.loadInfo();
-
-    const sheet = doc.sheetsByID[process.env.SHEET_ID];
-    await sheet.addRow({
-      Timestamp: new Date().getTime(),
-      "Email Address (Personal)": email,
-      "Name (First and Last)": name,
-      "Student Number": stuNum,
-      Grade: grade,
-    });
+    const data = fetcher("/api/email");
+    console.log(data);
   };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [stuNum, setstuNum] = useState("");
   const [grade, setGrade] = useState("");
-
+  const fetcher = (url) =>
+    fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        stuNum: stuNum,
+        name: name,
+        grade: grade,
+      }),
+    }).then((res) => res.json());
   return (
     <div className="h-screen">
       <Navbar></Navbar>

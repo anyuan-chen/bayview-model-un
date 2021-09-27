@@ -3,8 +3,9 @@ import Navbar from "../components/navbar";
 import Router from "next/router";
 export default function Home() {
   const redirectMail = () => {
-    Router.push('/mailing')
+    Router.push("/mailing");
   };
+
   return (
     <div>
       <Head>
@@ -25,7 +26,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
       <footer></footer>
     </div>
   );
