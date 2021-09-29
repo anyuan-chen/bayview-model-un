@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import Post from "../components/post";
 export async function getStaticProps() {
   const data = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp&access_token=${process.env.INSTAGRAM_CODE}`
+    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,caption&access_token=${process.env.INSTAGRAM_CODE}`
   ).then((data) => data.json());
   return {
     props: {
@@ -14,7 +14,14 @@ export async function getStaticProps() {
 
 export default function About({ data }) {
   const posts = data.data.map((post) => {
-    return <Post key={post.id} src={post.media_url}></Post>;
+    return (
+      <Post
+        key={post.id}
+        src={post.media_url}
+        caption={post.caption}
+        username={post.username}
+      ></Post>
+    );
   });
   return (
     <div className="flex flex-col ">

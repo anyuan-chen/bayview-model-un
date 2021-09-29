@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SliderData } from "../data/SliderData.js";
+import  SliderData  from "../data/SliderData.js";
 export default function ImageSlider ({slides}) {
     const [current, setCurrent] = useState(0);
     
@@ -10,7 +10,7 @@ export default function ImageSlider ({slides}) {
         
     }*/
 
-    const length = 2; // TODO need to fix
+    const length = SliderData.length; // TODO need to fix
 
     const nextSlide = () => {
         setCurrent(current === length - 1? 0 : current + 1);
