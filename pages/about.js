@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../components/navbar";
 export async function getStaticProps(context) {
-  return {
-    props: {}, // will be passed to the page component as props
-  };
+  const data = await fetch(
+    `https://graph.instagram.com/5994784156?fields=id,username&access_token=${process.env.INSTAGRAM_CODE}`
+  );
 }
-export default function About() {
+export default function About({ data }) {
   return (
     <div className="flex flex-col ">
       <Navbar></Navbar>
