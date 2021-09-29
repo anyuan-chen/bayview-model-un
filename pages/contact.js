@@ -36,7 +36,7 @@ export default function Contact() {
       <div className="flex flex-col items-center">
         <div className="w-screen/2">
           <form onSubmit={sendToEmail}>
-            <div className="grid grid-rows-3 grid-cols-2 gap-16">
+            <div className="grid grid-rows-3 grid-cols-2 gap-x-16 gap-y-8">
               <div className="flex flex-col">
                 <label for="name">name</label>
                 <input
@@ -76,6 +76,11 @@ export default function Contact() {
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                 ></input>
+              </div>
+              <div className="flex flex-col col-span-2">
+                <button type="submit" className="border border-black py-2">
+                  Submit
+                </button>
               </div>
             </div>
           </form>
