@@ -1,13 +1,24 @@
 import React from "react";
 import Navbar from "../components/navbar";
-export async function getStaticProps(context) {
+import Post from "../components/post";
+export async function getStaticProps() {
   const data = await fetch(
-    `https://graph.instagram.com/5994784156?fields=id,username&access_token=${process.env.INSTAGRAM_CODE}`
-  );
+    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp&access_token=${process.env.INSTAGRAM_CODE}`
+  ).then((data) => data.json());
+  return {
+    props: {
+      data: data,
+    },
+  };
 }
+
 export default function About({ data }) {
+  const posts = data.data.map((post) => {
+    return <Post key={post.id} src={post.media_url}></Post>;
+  });
   return (
     <div className="flex flex-col ">
+      {!data && <h1>fuck</h1>}
       <Navbar></Navbar>
       <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
         <h1 className="bold text-4xl pb-6">About Us</h1>
@@ -34,7 +45,8 @@ export default function About({ data }) {
         </div>
       </div>
       <div className="px-32 pt-2 text-black text-4xl">
-        <h1>Latest Updates</h1>
+        <h1 className="pb-5">Latest Updates</h1>
+        <div className="grid grid-cols-3 gap-10">{posts}</div>
       </div>
     </div>
   );
