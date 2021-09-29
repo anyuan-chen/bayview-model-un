@@ -4,7 +4,7 @@ export default function InstagramModal(props) {
   return (
     <div className="fixed w-full h-full z-30 top-0 left-0 flex items-center justify-center bg-opacity-50 bg-black bg-blend-normal	">
       <div className="flex w-9/12 h-5/6 z-50">
-        <img src={props.src}></img>
+        <img src={props.src} className="object-scale-down"></img>
         <div className="bg-white z-50">
           <div className="mx-8 flex flex-col items-start pt-5">
             <h1 className="font-bold text-base">{props.username}</h1>
