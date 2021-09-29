@@ -12,5 +12,8 @@ module.exports = {
 
     return config;
   },
+  images: {
+    domains: ["c4.wallpaperflare.com"],
+  },
   webpack5: false,
 };
