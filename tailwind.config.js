@@ -18,6 +18,13 @@ module.exports = {
         "screen/4": "25vh",
         "screen/5": "20vh",
       },
+      width: {
+        "screen-30": "70vw",
+        "screen/2": "50vw",
+        "screen/3": "33vw",
+        "screen/4": "25vw",
+        "screen/5": "20vw",
+      },
     },
   },
   variants: {

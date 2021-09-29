@@ -54,6 +54,9 @@ export default function Navbar() {
               <Link href="/mailing">
                 <a>mailing list</a>
               </Link>
+              <Link href="/pastEvents">
+                <a>past events</a>
+              </Link>
               <Link href="/contact">
                 <a>contact</a>
               </Link>
