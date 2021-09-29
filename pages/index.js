@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Router from "next/router";
-import ImageSlider from "../components/ImageSlider";
+import ImageSlider from "../components/imageSlider";
 export default function Home() {
   const redirectMail = () => {
     Router.push("/mailing");
