@@ -27,8 +27,12 @@ export default function Contact() {
     }).then((res) => res.json());
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <Navbar></Navbar>
+      <div className="text-white bg-main flex justify-center py-6 mb-6">
+        {" "}
+        <h1 className="bold text-4xl pb-6">Contact</h1>
+      </div>
       <div className="flex flex-col items-center">
         <div className="w-screen/2">
           <form onSubmit={sendToEmail}>

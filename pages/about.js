@@ -25,7 +25,6 @@ export default function About({ data }) {
   });
   return (
     <div className="flex flex-col ">
-      {!data && <h1>fuck</h1>}
       <Navbar></Navbar>
       <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
         <h1 className="bold text-4xl pb-6">About Us</h1>
