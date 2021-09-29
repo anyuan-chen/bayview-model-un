@@ -39,14 +39,14 @@ export default function ImageSlider ({slides}) {
                         </div>
                     )
                 })}
-                <div class="">
-                    <img src={sliderData[previous].image} className="max-h-72 w-full"/>
+                <div className="slide-previous">
+                    <img src={sliderData[previous].image} className="max-h-52 w-full"/>
                 </div>
-                <div class="">    
+                <div className="slide-current">    
                     <img src={sliderData[current].image} className="max-h-72 w-full"/>
                 </div>
-                <div class="">
-                    <img src={sliderData[next].image} className="max-h-72 w-full"/>
+                <div className="slide-next">
+                    <img src={sliderData[next].image} className ="max-h-52 w-full"/>
                 </div>
             </section>
             <div className="flex item-end">
