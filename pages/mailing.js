@@ -8,7 +8,6 @@ export default function Mailing() {
     const data = fetcher("/api/email");
     console.log(data);
   };
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [stuNum, setstuNum] = useState("");
