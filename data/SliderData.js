@@ -9,6 +9,18 @@ module.exports = sliderData = [
   },
   {
     image: 
-      "https://papers.co/wallpaper/papers.co-bj10-art-girl-face-smile-cute-anime-35-3840x2160-4k-wallpaper.jpg"
+      "https://papers.co/wallpaper/papers.co-bj10-art-girl-face-smile-cute-anime-35-3840x2160-4k-wallpaper.jpg",
+  },
+  {
+    image:
+      "https://c4.wallpaperflare.com/wallpaper/787/1018/508/mitsuha-miyamizu-taki-tachibana-kimi-no-na-wa-romance-wallpaper-preview.jpg",
+  },
+  {
+    image:
+      "https://static.boredpanda.com/blog/wp-content/uploads/2021/05/fb_image_60ae515b06705.png",
+  },
+  {
+    image: 
+      "http://pm1.narvii.com/7137/59b9bc142b2e9c731dbdb10e35ba30cc3c1afc9cr1-564-1159v2_uhq.jpg",
   },
 ];

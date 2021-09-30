@@ -31,24 +31,21 @@ export default function ImageSlider ({slides}) {
 
     
     return (
-        <div className="flex items-center h-96 bg-white space-evenly justify-evenly flex-col">
-            <section className="slider grid grid-row-2 grid-col-3">
-                {sliderData.map((slide, index) => {
-                    return (
-                        <div key={index}>
-                        </div>
-                    )
-                })}
-                <div className="slide-previous">
-                    <img src={sliderData[previous].image} className="max-h-52 w-full"/>
+        <div className="flex items-center h-72 space-evenly justify-evenly flex-col">
+            <div className="flex justify-content center w-4/5">
+                <section className="flex justify-around gap-3">
+                    <div className="slide-previous">
+                        <img src={sliderData[previous].image} className="h-72 w-screen object-scale-down"/>
+                    </div>
+                    <div className="slide-current">
+                        <img src={sliderData[current].image} className="h-80 w-screen object-scale-down"/>        
+                    </div>
+                    <div className="slide-next">
+                        <img src={sliderData[next].image} className ="h-72 w-screen object-scale-down"/>
+                    
+                    </div>
+                </section>
                 </div>
-                <div className="slide-current">    
-                    <img src={sliderData[current].image} className="max-h-72 w-full"/>
-                </div>
-                <div className="slide-next">
-                    <img src={sliderData[next].image} className ="max-h-52 w-full"/>
-                </div>
-            </section>
             <div className="flex item-end">
                 <button className="px-16 py-2 bg-white" onClick={prevSlide}>left arrow</button>
                 <button className="px-16 py-2 bg-white" onClick={nextSlide}>right arrow</button>

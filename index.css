@@ -14,12 +14,20 @@
 
 .slide-current {
     opacity: 1;
+    justify-content: center;
+    max-width: calc(100%/3);
+
 }
 .slide-previous {
     opacity: 0.60;
+    justify-content: center;
+    max-width: calc(100%/3);
 }
 
 .slide-next {
     opacity: 0.60;
+    justify-content: center;
+    max-width: calc(100%/3);
+    
 }
 
