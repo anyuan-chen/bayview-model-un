@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.nextFadeIn {
+    animation: rightFadeIn 2s ease-in-out; 
+}
 
-.slider {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.prevFadeIn {
+    animation: leftFadeIn 2s ease-in-out; 
 }
 
 
-.slide-current {
-    opacity: 1;
-    justify-content: center;
-    max-width: calc(100%/3);
-
-}
-.slide-previous {
-    opacity: 0.60;
-    justify-content: center;
-    max-width: calc(100%/3);
-}
-
-.slide-next {
-    opacity: 0.60;
-    justify-content: center;
-    max-width: calc(100%/3);
-    
+@keyframes rightFadeIn {
+    0% { 
+        opacity: 1; 
+        transform: translate(50px, 0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(50px, 0);
+    }
+    100% { 
+        opacity: 1; 
+        
+    }
 }
 
+@keyframes leftFadeIn {
+    0% { 
+        opacity: 1; 
+        transform: translate(-50px, 0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50px, 0);
+    }
+    100% {
+        opacity: 1; 
+    }
+}
