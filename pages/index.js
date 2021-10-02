@@ -27,7 +27,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex items-center h-96 bg-white space-evenly justify-evenly flex-col">
-            <NewImageSlider></NewImageSlider>
+            <ImageSlider></ImageSlider>
           </div>
         </div>
       </main>

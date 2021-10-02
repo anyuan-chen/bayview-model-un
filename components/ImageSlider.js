@@ -9,6 +9,25 @@ export default function ImageSlider ({slides}) {
     const [prevFadeIn, setPrevFadeIn] = useState(false);    
     const [nextFadeIn, setNextFadeIn] = useState(false);
 
+    const [loadedImages, setLoadedImages] = useState([
+        sliderData[current % sliderData.length],
+        sliderData[(current + 1) % sliderData.length],
+        sliderData[(current + 2) % sliderData.length],
+        sliderData[(current + 3) % sliderData.length],
+        sliderData[(current + 4) % sliderData.length],
+      ]);
+    
+      useEffect(() => {
+        setLoadedImages([
+          sliderData[current % sliderData.length],
+          sliderData[(current + 1) % sliderData.length],
+          sliderData[(current + 2) % sliderData.length],
+          sliderData[(current + 3) % sliderData.length],
+          sliderData[(current + 4) % sliderData.length],
+        ]);
+        console.log(loadedImages);
+      }, [current]);
+
 
     
     /*if(!Array.isArray(slides) || slides.length <= 0) {
@@ -23,7 +42,6 @@ export default function ImageSlider ({slides}) {
         setNextFadeIn(true);
         setPrevFadeIn(false);
         setCurrent(current === length - 1? 0 : current + 1);
-    
     };
 
     const prevSlide = () => {
@@ -32,38 +50,43 @@ export default function ImageSlider ({slides}) {
         setCurrent(current === 0? length - 1 : current - 1);
     }
 
-    
-    const getNext = () => {
-        return (current + 1) % length;
-    }
-
-    const getPrevious = () => {
-        return (current - 1 + length) % length;
-    }
-
-    const setCurrentImageClassName = () => {
-        if(prevFadeIn === false && nextFadeIn === false) {
+    const getClassName = (index) => {
+        if(!prevFadeIn && !nextFadeIn) {
+            if(index === 0 || index === 2) {
+                return "half-faded";
+            }
             return "";
         }
-        if(prevFadeIn) return "prevFadeIn";
-        return "nextFadeIn";
+        if(prevFadeIn) {
+            if(index === 1) {
+                return "rightToggleIn";
+            }
+            return "rightToggleOut";
+        }
+        if(nextFadeIn) {
+            if(index === 0 || index === 2) {
+                return "leftToggleOut";
+            }
+            return "leftToggleIn";
+        }
+        return prevFadeIn;
     }
 
     return (
-        <div className="flex items-center h-72 space-evenly justify-evenly flex-col">
+        <div className="flex items-center h-72 space-evenly justify-evenly flex-col gap-5">
             <div className="flex justify-content center w-4/5">
-                <section className="flex justify-around gap-3"> 
-                    <div key={Math.random()} className={prevFadeIn? "prevFadeIn" : "nextFadeIn"}>  
-                        <img src={sliderData[getPrevious()].image} className="h-72 w-screen object-scale-down"/>
+                <section className="flex"> 
+                    <div key={Math.random()} className={getClassName(0)}>  
+                        <img src={loadedImages[0].image} className="h-72 w-screen object-scale-down"/>
                     </div>
-                    <div key={Math.random()} className={setCurrentImageClassName()}>
-                        <img src={sliderData[current].image} className="h-72 w-screen object-scale-down"/>        
+                    <div key={Math.random()} className={getClassName(1)}> 
+                        <img src={loadedImages[1].image} className="h-72 w-screen object-scale-down"/>
                     </div>
-                    <div key={Math.random()} className={nextFadeIn? "nextFadeIn" : "prevFadeIn"}>
-                        <img src={sliderData[getNext()].image} className ="h-72 w-screen object-scale-down"/>
+                    <div key={Math.random()} className={getClassName(2)}> 
+                        <img src={loadedImages[2].image} className="h-72 w-screen object-scale-down"/>
                     </div>
                 </section>
-                </div>
+            </div>
             <div className="flex item-end gap-3">
                 <button className="px-16 py-2 bg-gray-400" onClick={prevSlide}>left arrow</button>
                 <button className="px-16 py-2 bg-gray-400" onClick={nextSlide}>right arrow</button>
