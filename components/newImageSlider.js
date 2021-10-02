@@ -1,52 +1,53 @@
 import React, { useState, useEffect } from "react";
 import sliderData from "../data/sliderData";
 export default function NewImageSlider() {
-  const [index, setIndex] = useState(0);
-  const [loadedImages, setLoadedImages] = useState([
-    sliderData[index % sliderData.length],
-    sliderData[(index + 1) % sliderData.length],
-    sliderData[(index + 2) % sliderData.length],
-    sliderData[(index + 3) % sliderData.length],
-    sliderData[(index + 4) % sliderData.length],
-  ]);
+  const [globalIndex, setGlobalIndex] = useState(0);
+  const isHidden = (index) => {
+    if (index === globalIndex + 1) {
+      return "newFadeRightIn";
+    }
+    if (index <= globalIndex + 3 && index >= globalIndex + 1) {
+      return "newFadeRightIn";
+    }
 
-  useEffect(() => {
-    setLoadedImages([
-      sliderData[index % sliderData.length],
-      sliderData[(index + 1) % sliderData.length],
-      sliderData[(index + 2) % sliderData.length],
-      sliderData[(index + 3) % sliderData.length],
-      sliderData[(index + 4) % sliderData.length],
-    ]);
-    console.log(loadedImages);
-  }, [index]);
+    return "hiddenImage";
+  };
 
-  return (
-    <div className="flex">
-      <img
-        src={loadedImages[0].image}
-        className="hidden h-72 w-screen object-scale-down"
-      ></img>
-      <button onClick={() => setIndex(index + 1)}>
+  let imageComponents = sliderData.map((image, localIndex) => {
+    const classApplied = isHidden(localIndex);
+    if (localIndex === globalIndex + 1) {
+      return (
+        <button onClick={() => setGlobalIndex(globalIndex - 1)}>
+          <div className={classApplied}>
+            <img
+              src={image.image}
+              className="h-72 w-screen object-scale-down"
+            ></img>
+          </div>
+        </button>
+      );
+    } else if (localIndex === globalIndex + 3) {
+      return (
+        <button onClick={() => setGlobalIndex(globalIndex + 1)}>
+          <div className={classApplied}>
+            <img
+              src={image.image}
+              className="h-72 w-screen object-scale-down"
+            ></img>
+          </div>
+        </button>
+      );
+    }
+
+    return (
+      <div className={classApplied}>
         <img
-          src={loadedImages[1].image}
+          src={image.image}
           className="h-72 w-screen object-scale-down"
         ></img>
-      </button>
-      <img
-        src={loadedImages[2].image}
-        className="h-72 w-screen object-scale-down"
-      ></img>
-      <button onClick={() => setIndex(index + 1)}>
-        <img
-          src={loadedImages[3].image}
-          className="h-72 w-screen object-scale-down"
-        ></img>
-      </button>
-      <img
-        src={loadedImages[4].image}
-        className="hidden h-72 w-screen object-scale-down"
-      ></img>
-    </div>
-  );
+      </div>
+    );
+  });
+
+  return <div className="flex ">{imageComponents}</div>;
 }
