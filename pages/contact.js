@@ -4,7 +4,7 @@ export default function Contact() {
   const sendToEmail = async (event) => {
     // TODO need to fix
     event.preventDefault();
-    const data = fetcher("/api/email");
+    const data = fetcher("/api/contact");
     console.log(data);
   };
   const [name, setName] = useState("");
@@ -14,7 +14,6 @@ export default function Contact() {
   const fetcher = (url) =>
     fetch(url, {
       method: "POST",
-      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
