@@ -17,9 +17,8 @@ export default function Navbar() {
     return sideBar? "slideIn" : "slideOut";
   }
 
-
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 sticky top-0 bg-white z-50">
       <div
         className="px-12 col-start-1 row-start-1 py-6"
         onClick={toggleSidebar}
@@ -53,7 +52,7 @@ export default function Navbar() {
                     ></rect>
                   </svg>
               </div>
-              <div className="space-y-10 font-body text-xl pl-12 pr-12 flex flex-col">
+              <div className="space-y-10 font-body text-xl pl-12 pr-12 flex flex-col z-50">
                 <Link href="/">
                   <a className="default-element">home</a>
                 </Link>
@@ -77,5 +76,6 @@ export default function Navbar() {
           </div>
         </div>
     </div>
+  
   );
 }

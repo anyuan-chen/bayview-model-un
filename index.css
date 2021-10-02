@@ -12,18 +12,16 @@
 }
 
 .slideIn {
-    position: absolute;
+    position: fixed;
     animation: slideIn 1s ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 100;
     order: -1;
 }
 
 .slideOut {
-    position: absolute;
+    position: fixed;
     animation: slideOut 1s ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 100;
     order: -1;
 }
 
