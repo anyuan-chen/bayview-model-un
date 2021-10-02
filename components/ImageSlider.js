@@ -49,9 +49,9 @@ export default function ImageSlider({ slides }) {
   const getClassName = (index) => {
     if (!prevFadeIn && !nextFadeIn) {
       if (index === 0 || index === 2) {
-        return "half-faded";
+        return "default-side";
       }
-      return "";
+      return "default-current";
     }
     if (prevFadeIn) {
       if (index === 1) {

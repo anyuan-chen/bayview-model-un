@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.nextFadeIn {
-    animation: rightFadeIn 2s ease-in-out; 
+
+.default-side {
+    opacity: 0.5;
+    transform: scale(0.8);
 }
 
-.prevFadeIn {
-    animation: leftFadeIn 2s ease-in-out; 
+.default-current {
+    transform: scale(1.1);
 }
-.half-faded {
-    opacity: 0.5;
-}
+
 @keyframes leftFadeOut {
     0% {
         opacity: 1;
         transform: translate(5rem, 0rem);
-        transform: scale(1);
+        transform: scale(1.1);
     }
     50% {
         opacity: 0.75;
@@ -32,7 +32,7 @@
 @keyframes leftFadeIn {
     0% {
         opacity: 0;
-        transform: scale(1);
+        transform: scale(1.1);
     }
     50% {
         opacity: 0.5;
@@ -51,7 +51,7 @@
     0% {
       opacity: 1;
       transform: translate(-5rem, 0rem);
-      transform: scale(1);
+      transform: scale(1.1);
     }
     50% {
        opacity: 0.75;
@@ -67,7 +67,7 @@
 @keyframes rightFadeIn {
     0% {
       opacity: 0;
-      transform: scale(1);
+      transform: scale(1.1);
     }
     50% {
         opacity: 0.5;
