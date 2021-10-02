@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -17,6 +17,28 @@ export default function Navbar() {
     return sideBar? "slideIn" : "slideOut";
   }
 
+  const clickedOutside = (ref) => {
+    useEffect(() => {
+      /**
+      * Alert if clicked on outside of element
+      **/
+      function handleClickOutside(event) {
+        if(ref.current && !ref.current.contains(event.target)) {
+          setsideBar(false);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef(null);
+  clickedOutside(wrapperRef);
+
   return (
     <div className="grid grid-cols-3 sticky top-0 bg-white z-50">
       <div
@@ -32,7 +54,7 @@ export default function Navbar() {
       <div className="justify-self-center self-center">
         <h1>Bayview Model UN</h1>
       </div>
-      <div className={getSideBarClassName()}>
+      <div ref={wrapperRef} className={getSideBarClassName()}>
         <div className="absolute w-96 text-white shadow-xl z-50">
             <div className=" space-y-5 h-screen bg-sub ">
               <div onClick={toggleSidebar} className="px-12 py-6">
