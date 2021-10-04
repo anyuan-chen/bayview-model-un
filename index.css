@@ -13,40 +13,42 @@
 
 .slideIn {
     position: fixed;
-    animation: slideIn 1s ease-in-out;
+    top: 0;
+    animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    order: -1;
+    
 }
 
 .slideOut {
     position: fixed;
-    animation: slideOut 1s ease-in-out;
+    top: 0;
+    animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    order: -1;
+    
 }
 
 .hidden-sideBar {
-    position: absolute;
+    top: 0;
+    position: fixed;
     display: none;
-    order: -1
 }
 
 .default-element {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     padding-left: 1rem;
-    -webkit-transition: transform 0.5s ease-in-out,
-                        background-color 0.5s ease-in-out,
-                        color 0.5s ease-in-out;
-    -moz-transition: transform 0.5s ease-in-out,
-                     background-color 0.5s ease-in-out,
-                     color 0.5s ease-in-out;
-    -o-transition: transform 0.5s ease-in-out,
-                   background-color 0.5s ease-in-out,
-                   color 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out,
-                background-color 0.5s ease-in-out,
-                color 0.5s ease-in-out;;
+    -webkit-transition: transform 0.25s ease-in-out,
+                        background-color 0.25s ease-in-out,
+                        color 0.25s ease-in-out;
+    -moz-transition: transform 0.25s ease-in-out,
+                     background-color 0.25s ease-in-out,
+                     color 0.25s ease-in-out;
+    -o-transition: transform 0.25s ease-in-out,
+                   background-color 0.25s ease-in-out,
+                   color 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out,
+                background-color 0.25s ease-in-out,
+                color 0.25s ease-in-out;
 }
 .default-element:hover {
     transform: scale(1.05);
@@ -204,9 +206,17 @@
   }
 }
 
-.team-slide-in {
+.teamSlides {
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   animation: slideInFromBottom 1.5s ease-out;
 } 
+
+.teamSlides:hover {
+  transform: scale(1.1);
+}
 
 @keyframes slideInFromBottom {
   0% {

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TeamMember(props) {
   return (
-    <div className="team-slide-in">
+    <div className="teamSlides">
       <div className="grid grid-cols-2 shadow-lg rounded-xl gap-3">
         <div className="col-start-1 col-span-1 my-2 mx-2">
           <img src={props.img} className="h-64 w-screen object-scale-down"></img>

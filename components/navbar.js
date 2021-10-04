@@ -41,15 +41,14 @@ export default function Navbar() {
 
   return (
     <div className="grid grid-cols-3 sticky top-0 bg-white z-50 shadow-lg">
-      <div
-        className="px-12 col-start-1 row-start-1 py-6"
-        onClick={toggleSidebar}
-      >
-        <svg viewBox="0 0 100 80" width="40" height="40">
-          <rect width="80" height="10"></rect>
-          <rect y="20" width="80" height="10"></rect>
-          <rect y="40" width="80" height="10"></rect>
-        </svg>
+      <div className="px-10 col-start-1 row-start-1 py-6">
+        <button onClick={toggleSidebar} className="pl-2 pt-2">
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="80" height="10"></rect>
+            <rect y="20" width="80" height="10"></rect>
+            <rect y="40" width="80" height="10"></rect>
+          </svg>
+        </button>
       </div>
       <div className="justify-self-center self-center">
         <h1>Bayview Model UN</h1>
@@ -57,7 +56,8 @@ export default function Navbar() {
       <div ref={wrapperRef} className={getSideBarClassName()}>
         <div className="absolute w-96 text-white shadow-xl z-50">
             <div className=" space-y-5 h-screen bg-sub ">
-              <div onClick={toggleSidebar} className="px-12 py-6">
+              <div onClick={toggleSidebar} className="px-10 py-6">
+                <button className="pt-2 pl-2">
                   <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect width="80" height="10" style={{ fill: "white" }}></rect>
                     <rect
@@ -73,8 +73,9 @@ export default function Navbar() {
                       style={{ fill: "white" }}
                     ></rect>
                   </svg>
+                </button>
               </div>
-              <div className="space-y-10 font-body text-xl pl-12 pr-12 flex flex-col z-50">
+              <div className="space-y-10 font-body text-xl pl-8 pr-12 flex flex-col z-50">
                 <Link href="/">
                   <a className="default-element">
                     home
