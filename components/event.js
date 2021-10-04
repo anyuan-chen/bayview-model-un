@@ -1,35 +1,12 @@
 import React, { useState } from "react";
 
 export default function Event(props) {
-
-  const [onImage, setOnImage] = useState(false);
-  const [offImage, setOffImage] = useState(false);
-
-  const getClassName = () => {
-    if(!onImage && !offImage) {
-      return "";
-    }
-    if(onImage) {
-      return "event-on-image";
-    }
-    return "event-off-image";
-  }
-
-  const hoverImage = () => {
-    setOnImage(true);
-    setOffImage(false);
-  }
-
-  const unHoverImage = () => {
-    setOffImage(true);
-    setOnImage(false);
-  }
   
   return (
-    <div className="flex flex-col shadow-md p-8 content-between justify-between">
-      <div className="event">
-        <div className={getClassName()} onMouseEnter={() => hoverImage()} onMouseLeave={() => unHoverImage()}>
-          <img src={props.src} className=" w-70 object-cover"></img>
+    <div className="flex flex-col shadow-md p-8 content-between">
+      <div className="overflow-hidden">
+        <div className="event">
+          <img src={props.src} className="h-72 w-70 object-scale-down"></img>
         </div>
       </div>
 
