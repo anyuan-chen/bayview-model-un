@@ -40,7 +40,7 @@ export default function Navbar() {
   clickedOutside(wrapperRef);
 
   return (
-    <div className="grid grid-cols-3 sticky top-0 bg-white z-50">
+    <div className="grid grid-cols-3 sticky top-0 bg-white z-50 shadow-lg">
       <div
         className="px-12 col-start-1 row-start-1 py-6"
         onClick={toggleSidebar}

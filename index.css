@@ -211,3 +211,17 @@
     opacity: 1;
   }
 }
+
+.team-slide-in {
+  animation: slideInFromBottom 1.5s ease-out;
+} 
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}

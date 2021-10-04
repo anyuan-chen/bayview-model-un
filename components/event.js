@@ -4,7 +4,7 @@ export default function Event(props) {
   return (
     <div className="flex flex-col shadow-md p-8 content-between justify-between">
       <div className="overflow-hidden">
-        <img src={props.src} className=" w-70 hover:scale-75 object-cover "></img>
+        <img src={props.src} className=" w-70 object-cover "></img>
       </div>
 
       <div className="flex flex-col">
