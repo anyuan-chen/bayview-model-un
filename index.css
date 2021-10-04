@@ -34,12 +34,14 @@
 .default-element {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-left: 1rem;
     animation: sideBarElementUnHover 0.5s ease-in-out;
     animation-fill-mode: forwards;   
 }
 .default-element:hover {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-left: 1rem;
     animation: sideBarElementHover 0.5s ease-in-out;
     animation-fill-mode: forwards;
    
