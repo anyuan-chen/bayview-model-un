@@ -32,13 +32,17 @@
 }
 
 .default-element {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     animation: sideBarElementUnHover 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;   
 }
-
 .default-element:hover {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     animation: sideBarElementHover 0.5s ease-in-out;
     animation-fill-mode: forwards;
+   
 }
 
 @keyframes sideBarElementHover {
@@ -46,16 +50,19 @@
 
     }
     100% {
-        transform: scale(1.1);
+      transform: scale(1.05);
+      background-color: #Caeefb;
+      color: black;
     }
 }
 
 @keyframes sideBarElementUnHover {
     0% {
-        transform: scale(1.1);
+      transform: scale(1.05);
     }
     100% {
-        transform: scale(1);
+      transform: scale(1);
+      background-color: #548CD9;
     }
 }
 

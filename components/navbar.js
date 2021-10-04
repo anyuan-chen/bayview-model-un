@@ -75,24 +75,36 @@ export default function Navbar() {
                   </svg>
               </div>
               <div className="space-y-10 font-body text-xl pl-12 pr-12 flex flex-col z-50">
-                <Link href="/">
-                  <a className="default-element">home</a>
-                </Link>
-                <Link href="/about">
-                  <a className="default-element">about us</a>
-                </Link>
-                <Link href="/team">
-                  <a className="default-element">our team</a>
-                </Link>
-                <Link href="/mailing">
-                  <a className="default-element">mailing list</a>
-                </Link>
-                <Link href="/pastEvents">
-                  <a className="default-element">past events</a>
-                </Link>
-                <Link href="/contact">
-                  <a className="default-element">contact</a>
-                </Link>
+                <div className="default-element">
+                  <Link href="/">
+                    <a className="ml-4">home</a>
+                  </Link>
+                </div>
+                <div className="default-element">
+                  <Link href="/about">
+                    <a className="ml-4">about us</a>
+                  </Link>
+                </div>
+                <div className="default-element">
+                  <Link href="/team">
+                    <a className="ml-4">our team</a>
+                  </Link>
+                </div>
+                <div className="default-element">
+                  <Link href="/mailing">
+                    <a className="ml-4">mailing list</a>
+                  </Link>
+                </div>
+                <div className="default-element">
+                  <Link href="/pastEvents">
+                    <a className="ml-4">past events</a>
+                  </Link>
+                </div>
+                <div className="default-element">
+                  <Link href="/contact">
+                    <a className="ml-4">contact</a>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
