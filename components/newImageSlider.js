@@ -37,22 +37,8 @@ export default function NewImageSlider() {
       return "";
     })
   );
-  const [movedRight, setmovedRight] = useState(0);
-  const [movedLeft, setmovedLeft] = useState(0);
-
-  // useEffect(() => {
-  //   setCenter(center + 1);
-  //   setanimationStates(
-  //     sliderData.map((image, index) => {
-  //       if (Math.abs(center - index) < 2) {
-  //         return fadeIn;
-  //       }
-  //       return "";
-  //     })
-  //   );
-  // }, [movedRight]);
   //sets initial state of the image and initial animations
-  const imageComponents = sliderData.map((image, index) => {
+  let imageComponents = sliderData.map((image, index) => {
     if (index === center - 1) {
       return (
         <button>
@@ -60,6 +46,7 @@ export default function NewImageSlider() {
             <img
               src={image.image}
               className="h-72 w-screen object-scale-down"
+              key={Math.random()}
             ></img>
           </animated.div>
         </button>
@@ -71,17 +58,19 @@ export default function NewImageSlider() {
           <img
             src={image.image}
             className="h-72 w-screen object-scale-down"
+            key={Math.random()}
           ></img>
         </animated.div>
       );
     }
     if (index === center + 1) {
       return (
-        <button onClick={() => setmovedRight(movedRight + 1)}>
+        <button onClick={() => setFuck(fuck + 1)}>
           <animated.div style={animationStates[index]}>
             <img
               src={image.image}
               className="h-72 w-screen object-scale-down"
+              key={Math.random()}
             ></img>
           </animated.div>
         </button>
