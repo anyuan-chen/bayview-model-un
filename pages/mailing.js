@@ -29,7 +29,7 @@ export default function Mailing() {
   return (
     <div className="h-screen">
       <Navbar></Navbar>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <div className="bg-main h-screen text-white font-body px-36 flex flex-col pt-32">
           <h1 className="text-3xl font-bold">Join Our Mailing List</h1>
           <h2 className="pt-20 text-xl">
@@ -41,7 +41,7 @@ export default function Mailing() {
             <li className="list-inside list-disc">c</li>
           </ul>
         </div>
-        <div className="">
+        <div className="py-8">
           <form onSubmit={addToMailingList} className=" flex justify-center">
             <div className="w-8/12 flex flex-col space-y-8 pt-32">
               <div className="flex flex-col">

@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="w-screen/2">
           <form onSubmit={sendToEmail}>
             <div className="grid grid-rows-3 grid-cols-2 gap-x-16 gap-y-8">
-              <div className="flex flex-col">
+              <div className="flex flex-col col-span-2 md:col-span-1">
                 <label for="name">name</label>
                 <input
                   type="text"
@@ -46,7 +46,7 @@ export default function Contact() {
                   onChange={(event) => setName(event.target.value)}
                 ></input>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col col-span-2 md:col-span-1">
                 <label for="name">email</label>
                 <input
                   type="text"
@@ -68,13 +68,13 @@ export default function Contact() {
               </div>
               <div className="flex flex-col col-span-2">
                 <label for="subject">message</label>
-                <input
+                <textarea
                   type="text"
                   name="message"
                   className=""
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
-                ></input>
+                ></textarea>
               </div>
               <div className="flex flex-col col-span-2">
                 <button type="submit" className="border border-black py-2">

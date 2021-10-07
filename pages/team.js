@@ -19,7 +19,9 @@ export default function Team() {
         <h1 className="text-white font-body text-3xl"> Our Team</h1>
       </div>
       <div className="flex justify-center my-8">
-        <div className="max-w-5xl mt-8 grid grid-cols-2 gap-10">{teamMembers}</div>
+        <div className="max-w-5xl mt-8 grid md:grid-cols-2 sm:grid-cols-1 gap-10">
+          {teamMembers}
+        </div>
       </div>
     </div>
   );
