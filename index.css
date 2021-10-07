@@ -19,7 +19,6 @@
     top: 0;
     animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 50;
 }
 
 .slideOut {
@@ -27,8 +26,6 @@
     top: 0;
     animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 50;
-    
 }
 
 .hidden-sideBar {

@@ -54,7 +54,7 @@ export default function Navbar() {
         <h1>Bayview Model UN</h1>
       </div>
       <div ref={wrapperRef} className={getSideBarClassName()}>
-        <div className="absolute w-96 bg-sub text-white shadow-xl z-50">
+        <div className="absolute w-96 text-white shadow-xl z-50">
             <div className="space-y-5 h-screen bg-sub overflow-y-auto">
               <div onClick={toggleSidebar} className="px-10 py-6">
                 <button className="pt-2 pl-2">
