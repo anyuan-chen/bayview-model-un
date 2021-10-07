@@ -54,52 +54,66 @@ export default function ImageSlider() {
       return "default-current";
     }
     if (prevFadeIn) {
-      if (index === 1) {
-        return "rightToggleIn";
-      }
-      return "rightToggleOut";
+      if (index === 0) {
+        return "leftToggleIn";
+      } 
+      if(index === 1) {
+        return "leftToggleOut";
+      }   
+      return "default-side";
     }
     if (nextFadeIn) {
-      if (index === 0 || index === 2) {
-        return "leftToggleOut";
+      if (index === 2) {
+        return "rightToggleIn";
       }
-      return "leftToggleIn";
+      if(index === 1) {
+        return "rightToggleOut";
+      }
+      return "default-side";
     }
-    return prevFadeIn;
+    return "";
   };
 
+  const getIndex = (index) => {
+    if(nextFadeIn) {
+      return (index - 1 + 3) % 3;
+    }
+    else if(prevFadeIn) {
+      return (index + 1) % 3;
+    }
+    return index;
+  }
   return (
     <div className="flex items-center h-72 space-evenly justify-evenly flex-col gap-5">
-      <div className="flex justify-content center w-4/5">
-        <section className="flex">
-          <button onClick={prevSlide}>
-            <div key={Math.random()} className={getClassName(0)}>
-              <img
-                src={loadedImages[0].image}
-                className="h-72 w-screen object-scale-down"
-              />
-            </div>
-          </button>
-          <div key={Math.random()} className={getClassName(1)}>
+      <div>
+        <button className="test2"></button>
+      </div>
+      <div className="flex w-4/5">
+        <section className="flex justify-content-center">
+          <div key={Math.random()} className={getClassName(0)}>
             <img
-              src={loadedImages[1].image}
+              src={loadedImages[getIndex(0)].image}
               className="h-72 w-screen object-scale-down"
             />
           </div>
-          <button onClick={nextSlide}>
-            <div key={Math.random()} className={getClassName(2)}>
-              <img
-                src={loadedImages[2].image}
-                className="h-72 w-screen object-scale-down"
-              />
-            </div>
-          </button>
+          <div key={Math.random()} className={getClassName(1)}>
+            <img
+              src={loadedImages[getIndex(1)].image}
+              className="h-72 w-screen object-scale-down"
+            />
+          </div>
+          <div key={Math.random()} className={getClassName(2)}>
+            <img
+              src={loadedImages[getIndex(2)].image}
+              className="h-72 w-screen object-scale-down"
+            />
+          </div>
         </section>
       </div>
-      {/* <div className="flex item-end gap-3">
-                <button className="px-16 py-2 bg-gray-400" onClick={prevSlide}>left arrow</button>
-                <button className="px-16 py-2 bg-gray-400" onClick={nextSlide}>right arrow</button>
-            </div> */}
+      <div className="flex item-end gap-3">
+          <button className="px-16 py-2 bg-gray-400" onClick={prevSlide}>left arrow</button>
+          <button className="px-16 py-2 bg-gray-400" onClick={nextSlide}>right arrow</button>
+      </div>
     </div>
   );
 }

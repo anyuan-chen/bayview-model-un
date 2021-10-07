@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 .default-side {
-  opacity: 0.5;
-  transform: scale(0.8);
+  opacity: 0;
+  display: none;
 }
-
+.scroll {
+  overflow-y: scroll;
+}
 .default-current {
   transform: scale(1.1);
+  justify-content: center;
 }
 
 .slideIn {
@@ -16,7 +19,7 @@
     top: 0;
     animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    
+    z-index: 50;
 }
 
 .slideOut {
@@ -24,6 +27,7 @@
     top: 0;
     animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
+    z-index: 50;
     
 }
 
@@ -80,95 +84,73 @@
 @keyframes leftFadeOut {
   0% {
     opacity: 1;
-    transform: translate(5rem, 0rem);
     transform: scale(1.1);
-  }
-  50% {
-    opacity: 0.75;
-    transform: translate(-5rem, 0rem);
+    transform: translate(-19rem, 0rem);
   }
   100% {
-    opacity: 0.5;
-    transform: scale(0.8);
+    opacity: 0;
+    transform: scale(0.5);
+    
   }
 }
 
 @keyframes leftFadeIn {
   0% {
     opacity: 0;
-    transform: scale(1.1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translate(-5rem);
   }
   100% {
     opacity: 1;
-    transform: translate(0rem, 0rem);
-    transform: scale(1.1);
+    transform: translate(19rem, 0rem);
   }
 }
 
 @keyframes rightFadeOut {
   0% {
     opacity: 1;
-    transform: translate(-5rem, 0rem);
     transform: scale(1.1);
-  }
-  50% {
-    opacity: 0.75;
-    transform: translate(5rem, 0rem);
+    transform: translate(19rem, 0rem);
   }
   100% {
-    opacity: 0.5;
-    transform: scale(0.8);
+    opacity: 0;
+    transform: scale(0.5);
   }
 }
 
 @keyframes rightFadeIn {
   0% {
     opacity: 0;
-    transform: scale(1.1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translate(5rem);
   }
   100% {
     opacity: 1;
-    transform: translate(-0rem, 0rem);
-    transform: scale(1.1);
+    transform: translate(-19rem, 0rem);
   }
 }
 
 .rightToggleOut {
   animation: rightFadeOut 2s;
   animation-fill-mode: forwards;
-  opacity: 0;
+  transform: scale(1.1);
+  
 }
 
 .rightToggleIn {
   animation: rightFadeIn 2s;
   animation-fill-mode: forwards;
-  opacity: 1;
   z-index: 10;
+ 
 }
 
 .leftToggleIn {
   animation: leftFadeIn 2s;
   animation-fill-mode: forwards;
-  opacity: 1;
   z-index: 10;
+  
 }
 
 .leftToggleOut {
   animation: leftFadeOut 2s;
   animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.hiddenImage {
-  display: none;
+  transform: scale(1.1);
 }
 
 @keyframes newFade {
