@@ -85,32 +85,32 @@ export default function Navbar() {
               </div>
               <div className="space-y-10 font-body text-xl pl-8 pr-12 flex flex-col z-50">
                 <Link href="/">
-                  <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                     home
                   </a>
                 </Link>
                 <Link href="/about">
-                <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                     about us
                   </a>
                 </Link>
                 <Link href="/team">
-                <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                     our team
                   </a>
                 </Link>
                 <Link href="/mailing">
-                  <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                     mailing list
                   </a>
                 </Link>
                 <Link href="/pastEvents">
-                  <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                     past events
                   </a>
                 </Link>
                 <Link href="/contact">
-                  <a className={getSideBarElementClassName()}>
+                  <a className="sm: default-element">
                       contact
                   </a>
                 </Link>
