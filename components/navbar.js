@@ -83,7 +83,7 @@ export default function Navbar() {
                   </svg>
                 </button>
               </div>
-              <div className="space-y-10 font-body text-xl pl-8 pr-12 flex flex-col z-50">
+              <div className="space-y-10 font-body text-xl pl-8 pr-12 pb-32 flex flex-col z-50">
                 <Link href="/">
                   <a className="default-element">
                     home
