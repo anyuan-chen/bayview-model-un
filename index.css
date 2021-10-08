@@ -10,7 +10,6 @@
   transform: scale(1.1);
   justify-content: center;
 }
-
 .slideIn {
     position: fixed;
     top: 0;
@@ -48,7 +47,7 @@
                 background-color 0.25s ease-in-out,
                 color 0.25s ease-in-out;
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 700px) {
   .default-element:hover {
       transform: scale(1.05);
       background-color: #Caeefb;
