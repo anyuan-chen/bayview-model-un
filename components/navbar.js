@@ -63,7 +63,7 @@ export default function Navbar() {
       </div>
       <div ref={wrapperRef} className={getSideBarClassName()}>
         <div className="w-96 text-white shadow-xl z-50">
-            <div className="space-y-5 h-screen bg-sub">
+            <div className="space-y-5 h-full bg-sub overflow-y-auto">
               <div onClick={toggleSidebar} className="px-10 py-6">
                 <button className="pt-2 pl-2">
                   <svg viewBox="0 0 100 80" width="40" height="40">
@@ -83,7 +83,7 @@ export default function Navbar() {
                   </svg>
                 </button>
               </div>
-              <div className="space-y-10 font-body text-xl pl-8 pr-12 pb-32 flex flex-col z-50">
+              <div className="space-y-10 font-body text-xl pl-8 pr-12 pb-32 flex flex-col">
                 <Link href="/">
                   <a className="default-element">
                     home
@@ -119,6 +119,5 @@ export default function Navbar() {
           </div>
         </div>
     </div>
-  
   );
 }
