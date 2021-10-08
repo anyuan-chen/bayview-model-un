@@ -17,6 +17,14 @@ export default function Navbar() {
     return sideBar? "slideIn" : "slideOut";
   }
 
+  const getSideBarElementClassName = () => {
+    console.log(window.innerWidth);
+    if(window.innerWidth > 680) {
+      return "default-element";
+    }
+    return "";
+  }
+
   const clickedOutside = (ref) => {
     useEffect(() => {
       /**
@@ -77,32 +85,32 @@ export default function Navbar() {
               </div>
               <div className="space-y-10 font-body text-xl pl-8 pr-12 flex flex-col z-50">
                 <Link href="/">
-                  <a className="default-element">
+                  <a className={getSideBarElementClassName()}>
                     home
                   </a>
                 </Link>
                 <Link href="/about">
-                  <a className="default-element">
+                <a className={getSideBarElementClassName()}>
                     about us
                   </a>
                 </Link>
                 <Link href="/team">
-                  <a className="default-element">
+                <a className={getSideBarElementClassName()}>
                     our team
                   </a>
                 </Link>
                 <Link href="/mailing">
-                  <a className="default-element">
+                  <a className={getSideBarElementClassName()}>
                     mailing list
                   </a>
                 </Link>
                 <Link href="/pastEvents">
-                  <a className="default-element">
+                  <a className={getSideBarElementClassName()}>
                     past events
                   </a>
                 </Link>
                 <Link href="/contact">
-                  <a className="default-element">
+                  <a className={getSideBarElementClassName()}>
                       contact
                   </a>
                 </Link>
