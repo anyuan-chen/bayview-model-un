@@ -14,7 +14,6 @@
 .slideIn {
     position: fixed;
     top: 0;
-    height: 100vh;
     animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -22,7 +21,6 @@
 .slideOut {
     position: fixed;
     top: 0;
-    height: 100vh;
     animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
 }
