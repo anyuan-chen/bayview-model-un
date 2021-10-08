@@ -14,6 +14,7 @@
 .slideIn {
     position: absolute;
     top: 0;
+    height: 100vh;
     animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -21,6 +22,7 @@
 .slideOut {
     position: absolute;
     top: 0;
+    height: 100vh;
     animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -39,19 +41,21 @@
                         background-color 0.25s ease-in-out,
                         color 0.25s ease-in-out;
     -moz-transition: transform 0.25s ease-in-out,
-                     background-color 0.25s ease-in-out,
-                     color 0.25s ease-in-out;
+                    background-color 0.25s ease-in-out,
+                    color 0.25s ease-in-out;
     -o-transition: transform 0.25s ease-in-out,
-                   background-color 0.25s ease-in-out,
-                   color 0.25s ease-in-out;
+                  background-color 0.25s ease-in-out,
+                  color 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out,
                 background-color 0.25s ease-in-out,
                 color 0.25s ease-in-out;
 }
-.default-element:hover {
-    transform: scale(1.05);
-    background-color: #Caeefb;
-    color: black;
+@media only screen and (min-width: 640px) {
+  .default-element:hover {
+      transform: scale(1.05);
+      background-color: #Caeefb;
+      color: black;
+  }
 }
 
 @keyframes slideIn {
