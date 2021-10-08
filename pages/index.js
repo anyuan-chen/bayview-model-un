@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/navbar";
 import Router from "next/router";
 import ImageSlider from "../components/imageSlider";
+import SingleImageSlider from "../components/singleImageSlider";
 export default function Home() {
   const redirectMail = () => {
     Router.push("/mailing");
@@ -26,7 +27,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex items-center h-96 bg-white space-evenly justify-evenly flex-col">
-            <ImageSlider></ImageSlider>
+            <SingleImageSlider></SingleImageSlider>
           </div>
         </div>
       </main>
