@@ -62,8 +62,8 @@ export default function Navbar() {
         <h1>Bayview Model UN</h1>
       </div>
       <div ref={wrapperRef} className={getSideBarClassName()}>
-        <div className="w-96 text-white shadow-xl z-50">
-            <div className="space-y-5 h-full bg-sub overflow-y-auto">
+        <div className="w-96 text-white shadow-xl z-50 overflow-y-auto">
+            <div className="space-y-5 h-full bg-sub">
               <div onClick={toggleSidebar} className="px-10 py-6">
                 <button className="pt-2 pl-2">
                   <svg viewBox="0 0 100 80" width="40" height="40">
