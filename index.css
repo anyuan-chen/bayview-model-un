@@ -12,23 +12,19 @@
 }
 
 .slideIn {
-    position: relative;
+    position: fixed;
     top: 0;
-    padding-bottom: 10rem;
     height: 100vh;
     animation: slideIn 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    order: -1;
 }
 
 .slideOut {
-    position: relative;
+    position: fixed;
     top: 0;
-    padding-bottom: 10rem;
     height: 100vh;
     animation: slideOut 0.25s ease-in-out;
     animation-fill-mode: forwards;
-    order: -1;
 }
 
 .hidden-sideBar {
