@@ -13,17 +13,32 @@ export default function Post(props) {
   };
 
   return (
-    <div className="shadow-xl flex justify-center">
-      <button onClick={toggleModal}>
-        <img src={props.src} className="h-full w-screen object-scale-down"></img>
-        <div className={getClassName()}>
-          <InstagramModal
-            src={props.src}
-            username={props.username}
-            caption={props.caption}
-          ></InstagramModal>
+    <div>
+      <div className="hidden md:flex shadow-xl justify-center">
+        <button onClick={toggleModal}>
+          <img src={props.src} className="h-full w-screen object-scale-down"></img>
+          <div className={getClassName()}>
+            <InstagramModal
+              src={props.src}
+              username={props.username}
+              caption={props.caption}
+            ></InstagramModal>
+          </div>
+        </button>
+      </div>
+      <div className=" md:hidden">
+        <div className="flex">
+          <img src={props.src} className="h-full w-screen object-scale-down"/>
+          <div className="text">
+            <div>
+              {props.username}
+            </div>
+            <div>
+              {props.caption}
+            </div>
+          </div>
         </div>
-      </button>
+      </div>
     </div>
   );
 }

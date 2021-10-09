@@ -55,7 +55,7 @@ export default function About({ data }) {
       </div>
       <div className="px-32 pt-2 text-black text-4xl">
         <h1 className="pb-5">Latest Updates</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-10">
           {posts}
         </div>
       </div>
