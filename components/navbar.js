@@ -62,7 +62,7 @@ export default function Navbar() {
         <h1>Bayview Model UN</h1>
       </div>
       <div ref={wrapperRef} className={getSideBarClassName()}>
-        <div className="absolute w-96 text-white shadow-xl z-50">
+        <div className="relative w-96 text-white shadow-xl">
             <div className="space-y-5 h-screen bg-sub overflow-y-auto">
               <div onClick={toggleSidebar} className="px-10 py-6">
                 <button className="pt-2 pl-2">
@@ -83,34 +83,34 @@ export default function Navbar() {
                   </svg>
                 </button>
               </div>
-              <div className="space-y-10 font-body text-xl pl-8 pr-12 flex flex-col z-50">
+              <div className="space-y-10 font-body text-xl pl-8 pr-12 pb-32 flex flex-col">
                 <Link href="/">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                     home
                   </a>
                 </Link>
                 <Link href="/about">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                     about us
                   </a>
                 </Link>
                 <Link href="/team">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                     our team
                   </a>
                 </Link>
                 <Link href="/mailing">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                     mailing list
                   </a>
                 </Link>
                 <Link href="/pastEvents">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                     past events
                   </a>
                 </Link>
                 <Link href="/contact">
-                  <a className="sm: default-element">
+                  <a className="default-element">
                       contact
                   </a>
                 </Link>
@@ -119,6 +119,5 @@ export default function Navbar() {
           </div>
         </div>
     </div>
-  
   );
 }

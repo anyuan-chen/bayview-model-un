@@ -14,7 +14,6 @@ export default function Home() {
         <title>Bayview Model UN</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <Navbar></Navbar>
         <div>
