@@ -27,20 +27,20 @@ export default function About({ data }) {
   return (
     <div className="flex flex-col">
       <Navbar></Navbar>
-      <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
+      <div className="pl-12 text-white flex flex-col justify-center bg-main h-screen/2 z-0 md:pl-16 lg:pl-32">
         <h1 className="bold text-4xl pb-6">About Us</h1>
-        <p className="w-2/3 hidden md:block lg:w-5/12">
+        <p className="pb-4 w-2/3 hidden md:block lg:w-5/12">
           Lorem ipsum dolor Insert filler text here. Insert filler text here.
           Insert filler text here. Insert filler text here.Insert filler text
           here. Insert filler text here.Insert filler text here. Insert filler
           text here.Insert filler text here. Insert filler text hereInsert
           filler text here. Insert filler text here. Insert filler text here.
           Insert filler text here.Insert filler text here. Insert filler text
-          here.Insert filler text here.{" "}
+          here.Insert filler text here.
         </p>
       </div>
       <div className="flex px-12 md:justify-center md:pl-0">
-        <div className="shadow-lg w-full px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white md:w-8/12">
+        <div className="shadow-lg w-full px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white md:w-10/12 lg:w-8/12">
           <h1>Our Latest Events</h1>
           <p className="hidden md:block ">
             Insert filler text here. Insert filler text here. Insert filler text
