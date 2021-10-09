@@ -28,11 +28,11 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       <Navbar></Navbar>
-      <div className="text-white bg-main flex justify-start pl-10 py-10 mb-6 sm:justify-center sm:pl-0">
+      <div className="text-white bg-main flex justify-start pl-10 py-10 sm:justify-center sm:pl-0">
         <h1 className="bold text-4xl pb-6">Contact</h1>
       </div>
       <div className="flex flex-col items-center">
-        <div className="px-8 w-screen md:w-7/12">
+        <div className="px-8 py-12 w-screen md:w-7/12">
           <form onSubmit={sendToEmail}>
             <div className="grid grid-rows-3 grid-cols-2 gap-x-16 gap-y-8">
               <div className="flex flex-col col-span-2 md:col-span-1">
