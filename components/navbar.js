@@ -85,32 +85,32 @@ export default function Navbar() {
               </div>
               <div className="space-y-10 font-body text-xl pl-8 pr-12 pb-32 flex flex-col">
                 <Link href="/">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                     home
                   </a>
                 </Link>
                 <Link href="/about">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                     about us
                   </a>
                 </Link>
                 <Link href="/team">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                     our team
                   </a>
                 </Link>
                 <Link href="/mailing">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                     mailing list
                   </a>
                 </Link>
                 <Link href="/pastEvents">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                     past events
                   </a>
                 </Link>
                 <Link href="/contact">
-                  <a className="default-element">
+                  <a className="default-element" onClick={toggleSidebar}>
                       contact
                   </a>
                 </Link>
