@@ -39,7 +39,7 @@ export default function About({ data }) {
           here.Insert filler text here.{" "}
         </p>
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
         <div className="shadow-lg w-7/12 px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
           <h1>Our Latest Events</h1>
           <p className="hidden md:block ">
@@ -53,7 +53,7 @@ export default function About({ data }) {
           </Link>
         </div>
       </div>
-      <div className="md:px-16 pt-2 text-black text-4xl lg: px-32">
+      <div className="px-2 md: pt-2 text-black text-4xl lg:px-32">
         <h1 className="pb-5">Latest Updates</h1>
         <div className="flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-10">
           {posts}
