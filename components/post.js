@@ -24,7 +24,7 @@ export default function Post(props) {
 
   return (
     <div>
-      <div className="hidden md:flex shadow-xl justify-center">
+      <div className="hidden lg:flex shadow-xl">
         <button onClick={toggleModal}>
           <img src={props.src} className="h-full w-screen object-scale-down"></img>
           <div className={getClassName()}>
@@ -36,7 +36,7 @@ export default function Post(props) {
           </div>
         </button>
       </div>
-      <div className="flex-col py-4 shadow-xl md:hidden">
+      <div className="flex-col py-4 shadow-xl lg:hidden">
           <img src={props.src} className="h-full w-screen object-scale-down"/>
           <div className="">
             <div className="text-sm font-bold px-2 py-2">
