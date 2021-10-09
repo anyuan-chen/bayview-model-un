@@ -29,7 +29,7 @@ export default function About({ data }) {
       <Navbar></Navbar>
       <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
         <h1 className="bold text-4xl pb-6">About Us</h1>
-        <p className="w-1/3 hidden md:block">
+        <p className="w-2/3 hidden md:block lg:w-5/12">
           Lorem ipsum dolor Insert filler text here. Insert filler text here.
           Insert filler text here. Insert filler text here.Insert filler text
           here. Insert filler text here.Insert filler text here. Insert filler
@@ -39,8 +39,8 @@ export default function About({ data }) {
           here.Insert filler text here.{" "}
         </p>
       </div>
-      <div className="flex justify-center">
-        <div className="shadow-lg w-7/12 px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
+      <div className="flex px-12 md:justify-center md:pl-0">
+        <div className="shadow-lg w-full px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white md:w-8/12">
           <h1>Our Latest Events</h1>
           <p className="hidden md:block ">
             Insert filler text here. Insert filler text here. Insert filler text
@@ -53,7 +53,7 @@ export default function About({ data }) {
           </Link>
         </div>
       </div>
-      <div className="px-2 md:px-16 md:pt-2 lg:px-32 text-black text-4xl">
+      <div className="px-4 sm:px-16 md:pt-2 lg:px-32 text-black text-4xl">
         <h1 className="pb-5">Latest Updates</h1>
         <div className="flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-10">
           {posts}
