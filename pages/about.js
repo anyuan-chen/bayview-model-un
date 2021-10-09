@@ -53,7 +53,7 @@ export default function About({ data }) {
           </Link>
         </div>
       </div>
-      <div className="px-8 md:px-16 pt-2 text-black text-4xl lg: px-32">
+      <div className="md:px-16 pt-2 text-black text-4xl lg: px-32">
         <h1 className="pb-5">Latest Updates</h1>
         <div className="flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-10">
           {posts}
