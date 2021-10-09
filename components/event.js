@@ -3,7 +3,7 @@ import React from "react";
 export default function Event(props) {
   
   return (
-    <div className="flex flex-col shadow-md p-8 content-between">
+    <div className="flex flex-col shadow-md p-4 content-between sm:p-8">
       <div className="overflow-hidden">
         <div className="event">
           <img src={props.src} className="h-72 w-full object-scale-down"></img>
