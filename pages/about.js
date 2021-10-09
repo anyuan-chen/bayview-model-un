@@ -25,7 +25,7 @@ export default function About({ data }) {
     );
   });
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <Navbar></Navbar>
       <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
         <h1 className="bold text-4xl pb-6">About Us</h1>
@@ -53,7 +53,7 @@ export default function About({ data }) {
           </Link>
         </div>
       </div>
-      <div className="px-32 pt-2 text-black text-4xl">
+      <div className="px-8 md:px-16 pt-2 text-black text-4xl lg: px-32">
         <h1 className="pb-5">Latest Updates</h1>
         <div className="flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-10">
           {posts}
