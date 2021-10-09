@@ -8,14 +8,14 @@ export default function Post(props) {
   };
 
   const getClassName = () => {
-    if(!showModal) return "default-modal";
+    if (!showModal) return "default-modal";
     return "modal-fade-in";
-  }
+  };
 
   return (
     <div className="shadow-xl flex justify-center">
       <button onClick={toggleModal}>
-        <img src={props.src} className="h-96 w-96 object-scale-down"></img>
+        <img src={props.src} className="max-h-96 object-scale-down"></img>
         <div className={getClassName()}>
           <InstagramModal
             src={props.src}
