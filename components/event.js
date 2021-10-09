@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Event(props) {
   
@@ -6,7 +6,7 @@ export default function Event(props) {
     <div className="flex flex-col shadow-md p-8 content-between">
       <div className="overflow-hidden">
         <div className="event">
-          <img src={props.src} className="h-72 w-70 object-scale-down"></img>
+          <img src={props.src} className="h-72 w-full object-scale-down"></img>
         </div>
       </div>
 
