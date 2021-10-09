@@ -15,7 +15,7 @@ export default function Post(props) {
   return (
     <div className="shadow-xl flex justify-center">
       <button onClick={toggleModal}>
-        <img src={props.src} className="h-full w-full object-scale-down"></img>
+        <img src={props.src} className="h-full w-screen object-scale-down"></img>
         <div className={getClassName()}>
           <InstagramModal
             src={props.src}
