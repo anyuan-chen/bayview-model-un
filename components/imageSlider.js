@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import sliderData from "../data/sliderData.js";
 export default function ImageSlider() {
   const length = sliderData.length;
 

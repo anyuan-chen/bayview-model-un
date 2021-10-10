@@ -30,26 +30,17 @@ export default function About({ data }) {
       <div className="pl-32 text-white flex flex-col justify-center bg-main h-screen/2 z-0">
         <h1 className="bold text-4xl pb-6">About Us</h1>
         <p className="w-1/3 hidden md:block">
-          Lorem ipsum dolor Insert filler text here. Insert filler text here.
-          Insert filler text here. Insert filler text here.Insert filler text
-          here. Insert filler text here.Insert filler text here. Insert filler
-          text here.Insert filler text here. Insert filler text hereInsert
-          filler text here. Insert filler text here. Insert filler text here.
-          Insert filler text here.Insert filler text here. Insert filler text
-          here.Insert filler text here.{" "}
+          We're a school club that partakes in and hosts simulations where students can learn about diplomacy, international relations conferences. We meet virtually every Thursday from 3:30 - 5, but we will be shifting in-person soon.{" "}
         </p>
       </div>
       <div className="flex justify-center ">
         <div className="shadow-lg w-7/12 px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
-          <h1>Our Latest Events</h1>
+          <h1 className="font-bold">Our Next Events</h1>
           <p className="hidden md:block ">
-            Insert filler text here. Insert filler text here. Insert filler text
-            here. Insert filler text here.Insert filler text here. Insert filler
-            text here.Insert filler text here. Insert filler text here.Insert
-            filler text here. Insert filler text here.{" "}
+            BMUN VII will be happening sometime during the 2021-2022 school year. Watch for posts on our Instagram for more information.{" "}
           </p>
           <Link href="/pastEvents">
-            <a className="underline">View More</a>
+            <a className="underline">View More Events</a>
           </Link>
         </div>
       </div>

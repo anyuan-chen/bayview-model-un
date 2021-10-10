@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useState, useEffect } from "react";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -19,17 +20,32 @@ const responsive = {
     items: 1,
   },
 };
-const images = sliderData.map((data) => {
-  return (
-    <div>
-      <img className="w-full h-96 object-scale-down" src={data.image}></img>
-    </div>
-  );
-});
+// const fetcher = (url) =>
+//   fetch(url, {
+//     method: "GET",
+//     mode: "cors",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }).then((res) => res.json());
+
 export default function MultiImageSlider() {
-  return (
-    <div>
-      <Carousel responsive={responsive}>{images}</Carousel>
-    </div>
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
+    return images;
+  }
+  const imageObj = importAll(
+    require.context("../public/carousel", false, /\.(png|jpe?g|svg|JPG)$/)
   );
+  let images = [];
+  for (const [key, value] of Object.entries(imageObj)) {
+    images.push(<img src={`/carousel/${key}`}/>);
+  }
+  // imageObj.array.forEach(element => {
+
+  // });
+  return <div>{<Carousel responsive={responsive}>{images}</Carousel>}</div>;
 }
