@@ -175,7 +175,7 @@
 
 .modal-fade-in {
   position: fixed;
-  z-index: 50;
+  z-index: 10000;
   animation: fadeIn 1.5s;
 }
 
