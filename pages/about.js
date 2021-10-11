@@ -36,7 +36,7 @@ export default function About({ data }) {
           will be shifting in-person soon.{" "}
         </p>
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-start sm:justify-center">
         <div className="shadow-lg w-7/12 px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
           <h1 className="font-bold">Our Next Events</h1>
           <p className="hidden md:block ">
