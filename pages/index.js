@@ -42,12 +42,14 @@ export default function Home() {
           <div className="multi-image-slider">
             <MultiImageSlider></MultiImageSlider>
           </div>
-          <div className="flex items-center h-96 bg-white space-evenly justify-evenly flex-col sm:hidden">
+          <div className="flex flex-col items-center h-96 bg-white space-evenly justify-start shadow-lg sm:hidden">
+            <h3 className="font-body text-bold pt-5">Swipe to see what we do!</h3>
             <SingleImageSlider></SingleImageSlider>
           </div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+      </footer>
     </div>
   );
 }

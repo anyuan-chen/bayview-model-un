@@ -54,6 +54,7 @@ export default function About({ data }) {
           {posts}
         </div>
       </div>
+      <footer></footer>
     </div>
   );
 }

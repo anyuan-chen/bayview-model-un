@@ -23,6 +23,7 @@ export default function Team() {
           {teamMembers}
         </div>
       </div>
+      <footer></footer>
     </div>
   );
 }

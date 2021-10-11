@@ -91,6 +91,8 @@ export default function Mailing() {
           </form>
         </div>
       </div>
+      <footer>
+      </footer>
     </div>
   );
 }
