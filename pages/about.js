@@ -36,8 +36,8 @@ export default function About({ data }) {
           will be shifting in-person soon.{" "}
         </p>
       </div>
-      <div className="flex justify-start sm:justify-center">
-        <div className="shadow-lg w-7/12 px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
+      <div className="flex px-4 justify-start sm:justify-center sm:px-0">
+        <div className="shadow-lg px-6 w-full sm:w-7/12 sm:px-12 py-12 rounded-lg -translate-y-16 z-10 bg-white">
           <h1 className="font-bold">Our Next Events</h1>
           <p className="hidden md:block ">
             BMUN VII will be happening sometime during the 2021-2022 school
