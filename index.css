@@ -328,10 +328,8 @@
 }
 
 .multi-image-slider {
-  height: 24rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  height: 18rem;
+  padding-top: 1rem;
 }
 
 @media only screen and (max-width: 640px) {
@@ -351,12 +349,10 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .multi-image-slider {
-    height: 18rem;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    height: 24rem;
+    padding: 2rem 2rem 0rem 2rem;
   }
 }
 
