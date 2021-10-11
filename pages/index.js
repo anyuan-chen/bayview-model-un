@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Router from "next/router";
-import ImageSlider from "../components/imageSlider";
 import SingleImageSlider from "../components/singleImageSlider";
 import MultiImageSlider from "../components/multiImageSlider";
 export default function Home() {
@@ -40,8 +39,11 @@ export default function Home() {
               Join Us
             </button>
           </div>
-          <div className="h-96">
+          <div className="multi-image-slider">
             <MultiImageSlider></MultiImageSlider>
+          </div>
+          <div className="flex items-center h-96 bg-white space-evenly justify-evenly flex-col sm:hidden">
+            <SingleImageSlider></SingleImageSlider>
           </div>
         </div>
       </main>

@@ -1,24 +1,25 @@
 import React, { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { DotButton } from "./emblaCarouselButtons";
 export default function SingleImageSlider() {
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
+    r.keys().map((item) => {
       images[item.replace("./", "")] = r(item);
     });
     return images;
   }
+
   const imageObj = importAll(
     require.context("../public/carousel", false, /\.(png|jpe?g|svg|JPG)$/)
   );
+
   let images = [];
   for (const [key, value] of Object.entries(imageObj)) {
-    images.push(<img src={`/carousel/${key}`} />);
+    images.push(<img src={`/carousel/${key}`} className="h-72 w-screen object-scale-down"/>);
   }
-  const mediaByIndex = (index) => {
-    return images[index % sliderData.length].image;
-  };
+
+  console.log(images);
+
   const [viewportRef, embla] = useEmblaCarousel({
     skipSnaps: false,
     loop: true,
@@ -47,32 +48,18 @@ export default function SingleImageSlider() {
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <>
-      <div className="">
-        <div className="embla__viewport" ref={viewportRef}>
-          <div className="embla__container">
-            {sliderData.map((slide, index) => (
-              <div className="embla__slide" key={index}>
-                <div className="overflow-hidden px-2">
-                  <img
-                    className="h-52 w-screen object-scale-down"
-                    src={slide.image}
-                  />
-                </div>
+    <div className="">
+      <div className="embla__viewport" ref={viewportRef}>
+        <div className="embla__container">
+          {images.map((image, index) => (
+            <div className="embla__slide" key={index}>
+              <div className="overflow-hidden px-2">
+                {image}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="embla__dots">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            selected={index === selectedIndex}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
-      </div>
-    </>
+    </div>
   );
 }
