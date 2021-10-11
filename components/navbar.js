@@ -48,7 +48,7 @@ export default function Navbar() {
   clickedOutside(wrapperRef);
 
   return (
-    <div className="grid grid-cols-3 sticky top-0 bg-white z-50 shadow-lg">
+    <div className="sideBar">
       <div className="px-10 col-start-1 row-start-1 py-6">
         <button onClick={toggleSidebar} className="pl-2 pt-2">
           <svg viewBox="0 0 100 80" width="40" height="40">
@@ -118,6 +118,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
   );
 }
