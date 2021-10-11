@@ -18,8 +18,6 @@ export default function SingleImageSlider() {
     images.push(<img src={`/carousel/${key}`} className="h-72 w-screen object-scale-down"/>);
   }
 
-  console.log(images);
-
   const [viewportRef, embla] = useEmblaCarousel({
     skipSnaps: false,
     loop: true,
