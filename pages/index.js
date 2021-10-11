@@ -42,8 +42,7 @@ export default function Home() {
           <div className="multi-image-slider">
             <MultiImageSlider></MultiImageSlider>
           </div>
-          <div className="flex flex-col items-center h-96 bg-white space-evenly justify-start shadow-lg sm:hidden">
-            <h3 className="font-body text-bold pt-5">Swipe to see what we do!</h3>
+          <div className="flex flex-col items-center h-96 bg-white space-evenly justify-evenly sm:hidden">
             <SingleImageSlider></SingleImageSlider>
           </div>
         </div>

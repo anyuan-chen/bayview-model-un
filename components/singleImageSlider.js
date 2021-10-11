@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { PrevButton, NextButton } from "./singleImageSliderButtons";
 export default function SingleImageSlider() {
   function importAll(r) {
     let images = {};
@@ -24,6 +25,8 @@ export default function SingleImageSlider() {
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
@@ -36,6 +39,8 @@ export default function SingleImageSlider() {
   const onSelect = useCallback(() => {
     if (!embla) return;
     setSelectedIndex(embla.selectedScrollSnap());
+    setPrevBtnEnabled(embla.canScrollPrev());
+    setNextBtnEnabled(embla.canScrollNext());
   }, [embla, setSelectedIndex]);
 
   useEffect(() => {
@@ -46,7 +51,7 @@ export default function SingleImageSlider() {
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <div className="">
+    <div className="relative">
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
           {images.map((image, index) => (
@@ -57,6 +62,8 @@ export default function SingleImageSlider() {
             </div>
           ))}
         </div>
+        <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+        <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
       </div>
     </div>
   );
