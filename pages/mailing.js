@@ -94,7 +94,7 @@ export default function Mailing() {
                   onChange={(event) => setstuNum(event.target.value)}
                 ></input>
               </div>
-              <button type="submit" className="border border-black py-2">
+              <button type="submit" className="bg-main py-2 text-white">
                 Submit
               </button>
             </div>

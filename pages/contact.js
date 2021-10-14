@@ -80,7 +80,10 @@ export default function Contact() {
                 ></textarea>
               </div>
               <div className="flex flex-col col-span-2">
-                <button type="submit" className="border bg-main text-white py-2">
+                <button
+                  type="submit"
+                  className="border bg-main text-white py-2"
+                >
                   Submit
                 </button>
               </div>
