@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default async function (req, res) {
   if (req.method === "POST") {
     let nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
