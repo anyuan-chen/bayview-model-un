@@ -18,11 +18,12 @@ export default function Team() {
       <div className="h-40 bg-main flex items-center justify-center">
         <h1 className="text-white font-body text-3xl"> Our Team</h1>
       </div>
-      <div className="flex justify-center my-8">
+      <div className="flex justify-center my-8 px-2 lg:px-8 xl:px-0">
         <div className="max-w-5xl mt-8 grid md:grid-cols-2 sm:grid-cols-1 gap-10">
           {teamMembers}
         </div>
       </div>
+      <footer></footer>
     </div>
   );
 }

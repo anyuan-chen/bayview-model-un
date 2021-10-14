@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Router from "next/router";
-import ImageSlider from "../components/imageSlider";
 import SingleImageSlider from "../components/singleImageSlider";
 import MultiImageSlider from "../components/multiImageSlider";
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <main>
         <Navbar></Navbar>
         <div>
-          <div className="flex items-center h-96 bg-main space-evenly justify-evenly flex-col">
+          <div className="flex items-center h-72 xl:h-96 bg-main space-evenly justify-evenly flex-col">
             <div className="flex">
               <div className="word1">
                 <h3 className="font-body text-white text-3xl">
@@ -40,12 +39,16 @@ export default function Home() {
               Join Us
             </button>
           </div>
-          <div className="h-96">
+          <div className="multi-image-slider">
             <MultiImageSlider></MultiImageSlider>
+          </div>
+          <div className="flex flex-col items-center h-96 bg-white space-evenly justify-evenly sm:hidden">
+            <SingleImageSlider></SingleImageSlider>
           </div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+      </footer>
     </div>
   );
 }

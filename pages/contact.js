@@ -84,6 +84,8 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <footer>
+      </footer>
     </div>
   );
 }

@@ -32,14 +32,16 @@ const responsive = {
 export default function MultiImageSlider() {
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
+    r.keys().map((item) => {
       images[item.replace("./", "")] = r(item);
     });
     return images;
   }
+
   const imageObj = importAll(
     require.context("../public/carousel", false, /\.(png|jpe?g|svg|JPG)$/)
   );
+  
   let images = [];
   for (const [key, value] of Object.entries(imageObj)) {
     images.push(<img src={`/carousel/${key}`}/>);
@@ -47,5 +49,5 @@ export default function MultiImageSlider() {
   // imageObj.array.forEach(element => {
 
   // });
-  return <div>{<Carousel responsive={responsive}>{images}</Carousel>}</div>;
+  return <div>{<Carousel responsive={responsive} infinite={true}>{images}</Carousel>}</div>;
 }

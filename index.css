@@ -31,6 +31,17 @@
     display: none;
 }
 
+.sideBar {
+  position: sticky;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  top: 0px;
+  background-color: white;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  z-index: 9999;
+}
+
 .default-element {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -164,7 +175,7 @@
 
 .modal-fade-in {
   position: fixed;
-  z-index: 50;
+  z-index: 10000;
   animation: fadeIn 1.5s;
 }
 
@@ -185,9 +196,6 @@
   animation: slideInFromBottom 1.5s ease-out;
 } 
 
-.teamSlides:hover {
-  transform: scale(1.1);
-}
 
 @keyframes slideInFromBottom {
   0% {
@@ -226,7 +234,7 @@
 .embla__container {
   display: flex;
   user-select: none;
-  width: 80vw;
+  width: 98vw;
 }
 
 .embla__slide {
@@ -234,38 +242,50 @@
   min-width: 100%;
 }
 
-.embla__dots {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+.embla__button--prev {
+  left: 15px;
 }
 
-.embla__dot {
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-  padding: 0;
-  outline: 0;
-  border: 0;
-  width: 30px;
-  height: 30px;
-  margin-right: 7.5px;
-  margin-left: 7.5px;
-  display: flex;
-  align-items: center;
+.embla__button--next {
+  right: 15px;
 }
 
-.embla__dot:after {
-  background-color: #efefef;
+.embla__button__svg {
   width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  content: "";
+  height: 100%;
 }
 
-.embla__dot.is-selected:after {
-  background-color: #428FDF;
-  opacity: 1;
+.embla__button {
+  position: absolute;
+  outline: 0;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 35px;
+  touch-action: manipulation;
+  z-index: 50;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 38px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  fill: white;
+  padding: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.embla__button--prev:hover {
+  background-color: rgba(0,0,0,0.8);;
+}
+
+.embla__button--next:hover {
+  background-color: rgba(0,0,0,0.8);;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
 }
 
 .word1 {
@@ -307,12 +327,16 @@
   transition-duration: 1s ease-in-out;
 }
 
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+.multi-image-slider {
+  height: 24rem;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
-
+@media only screen and (max-width: 640px) {
+  .multi-image-slider {
+    display: none;
+  }
+}
 
 @media only screen and (min-width: 640px) {
   .default-element:hover {
@@ -320,7 +344,17 @@
       background-color: #Caeefb;
       color: black;
   }
+  .teamSlides:hover {
+    transform: scale(1.1);
+  }
 }
+
+@media only screen and (max-width: 1024px) {
+  .multi-image-slider {
+    height: 18rem;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .event:hover {
     transform: scale(1.3);
