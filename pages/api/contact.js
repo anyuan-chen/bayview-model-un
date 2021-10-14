@@ -1,6 +1,7 @@
+let nodemailer = require("nodemailer");
+
 export default async function (req, res) {
   if (req.method === "POST") {
-    let nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
       port: 465,
       host: "smtp.gmail.com",
@@ -10,6 +11,19 @@ export default async function (req, res) {
       },
       secure: true,
     });
+    await new Promise((resolve, reject) => {
+      // verify connection configuration
+      transporter.verify(function (error, success) {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log("Server is ready to take our messages");
+          resolve(success);
+        }
+      });
+    });
+
     const mailData = {
       from: "modelunbayview@gmail.com",
       to: "modelunbayview@gmail.com",
