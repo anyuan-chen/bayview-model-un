@@ -4,7 +4,7 @@ export default function Contact() {
   const sendToEmail = async (event) => {
     // TODO need to fix
     event.preventDefault();
-    const data = fetcher("/api/contact");
+    const data = fetcher("/api/sendGrid");
     console.log(data);
   };
   const [name, setName] = useState("");
@@ -84,8 +84,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <footer>
-      </footer>
+      <footer></footer>
     </div>
   );
 }
