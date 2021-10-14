@@ -16,7 +16,6 @@ export default function Event(props) {
           <h4 className="font-bold">{props.date}</h4>
           <h4>{props.location}</h4>
         </div>
-        <button className="underline text-left pt-4">Learn More</button>
       </div>
     </div>
   );

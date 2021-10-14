@@ -2,46 +2,46 @@ module.exports = team = [
   {
     name: "William Liu",
     bio: "Secretary General",
-    img: "https://wallpapercave.com/wp/wp8801768.jpg",
+    img: "/IMG_2232.PNG",
   },
   {
     name: "Yuming He",
     bio: "Deputy Secretary-General",
-    img: "https://i.pinimg.com/474x/7d/12/d8/7d12d840dacd8b3bfe50260f1d28b322.jpg",
+    img: "/IMG_2233.PNG",
   },
   {
     name: "Annie Luan",
     bio: "Undersecretary of Training",
-    img: "https://wallpapercave.com/wp/wp8040223.jpg",
+    img: "/IMG_2231.PNG",
   },
   {
     name: "Christopher Lam",
     bio: "Undersecretary of Training",
-    img: "https://i.pinimg.com/564x/7c/32/31/7c32313848b48fb9a564cfa312999c84.jpg",
+    img: "/IMG_2230.PNG",
   },
   {
     name: "Michelle Wong",
     bio: "Undersecretary of Communications",
-    img: "https://st.depositphotos.com/1771835/1477/i/600/depositphotos_14778931-stock-photo-happy-man-thumbs-up-sign.jpg",
+    img: "/IMG_2227.PNG",
   },
   {
     name: "Bill Cai",
     bio: "Undersecretary of Communications",
-    img: "https://wallpapercave.com/wp/wp5092887.jpg",
+    img: "/IMG_2226.PNG",
   },
   {
     name: "Jackie Li",
     bio: "Undersecretary of Conferences",
-    img: "https://wallpapercave.com/wp/wp8040223.jpg",
+    img: "/IMG_2228.PNG",
   },
   {
     name: "Andrew Chen",
     bio: "Undersecretary of Conferences/Web Developer",
-    img: "https://i.pinimg.com/564x/7c/32/31/7c32313848b48fb9a564cfa312999c84.jpg",
+    img: "/IMG_2229.PNG",
   },
   {
     name: "James Su",
     bio: "Web Developer",
-    img: "https://i.pinimg.com/564x/7c/32/31/7c32313848b48fb9a564cfa312999c84.jpg",
+    img: "/shan.jpg",
   },
 ];
