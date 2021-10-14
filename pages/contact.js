@@ -6,6 +6,10 @@ export default function Contact() {
     event.preventDefault();
     const data = fetcher("/api/sendGrid");
     console.log(data);
+    setEmail("");
+    setName("");
+    setSubject("");
+    setMessage("");
   };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -76,7 +80,7 @@ export default function Contact() {
                 ></textarea>
               </div>
               <div className="flex flex-col col-span-2">
-                <button type="submit" className="border border-black py-2">
+                <button type="submit" className="border bg-main text-white py-2">
                   Submit
                 </button>
               </div>

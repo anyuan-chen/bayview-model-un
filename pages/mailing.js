@@ -7,6 +7,10 @@ export default function Mailing() {
     event.preventDefault();
     const data = fetcher("/api/email");
     console.log(data);
+    setName("");
+    setEmail("");
+    setstuNum("");
+    setGrade("");
   };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,9 +40,15 @@ export default function Mailing() {
             By joining our mailing list, you gain access to many benefits.
           </h2>
           <ul className="pt-5 text-lg">
-            <li className="list-inside list-disc">notifications for upcoming conferences</li>
-            <li className="list-inside list-disc">updates on latest meetings</li>
-            <li className="list-inside list-disc">educational content on how to become a better delegate</li>
+            <li className="list-inside list-disc">
+              notifications for upcoming conferences
+            </li>
+            <li className="list-inside list-disc">
+              updates on latest meetings
+            </li>
+            <li className="list-inside list-disc">
+              educational content on how to become a better delegate
+            </li>
           </ul>
         </div>
         <div className="h-full px-8 py-12 md:pb-0 md:h-screen lg:pt-32">
@@ -91,8 +101,7 @@ export default function Mailing() {
           </form>
         </div>
       </div>
-      <footer>
-      </footer>
+      <footer></footer>
     </div>
   );
 }
