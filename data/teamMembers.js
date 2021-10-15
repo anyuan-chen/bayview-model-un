@@ -42,6 +42,6 @@ module.exports = team = [
   {
     name: "James Su",
     bio: "Web Developer",
-    img: "/shan.jpg",
+    img: "/shan.png",
   },
 ];
