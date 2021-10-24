@@ -19,7 +19,7 @@ export default async function (req, res) {
         //console.log(path.join(serverPath("public/carousel"), file));
       });
     });
-    console.log(fileList);
+    // console.log(fileList);
     res.json(fileList);
   }
 }

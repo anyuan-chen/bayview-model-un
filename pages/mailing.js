@@ -12,6 +12,7 @@ export default function Mailing() {
     setstuNum("");
     setGrade("");
   };
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [stuNum, setstuNum] = useState("");
@@ -30,6 +31,7 @@ export default function Mailing() {
         grade: grade,
       }),
     }).then((res) => res.json());
+    
   return (
     <div className="h-screen">
       <Navbar></Navbar>

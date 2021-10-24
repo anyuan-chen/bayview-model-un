@@ -34,8 +34,8 @@ export default async function (req, res) {
     };
     await new Promise((resolve, reject) => {
       transporter.sendMail(mailData, function (err, info) {
-        if (err) console.log(err);
-        else console.log(info);
+        // if (err) console.log(err);
+        // else console.log(info);
       });
     });
     res.status(200);

@@ -13,8 +13,8 @@ export default function Post(props) {
   };
 
   const getClassName = () => {
-    if (!showModal) return "default-modal";
-    return "modal-fade-in";
+    if (!showModal) return "defaultModal";
+    return "modalFadeIn";
   };
 
   const showFullText = () => {

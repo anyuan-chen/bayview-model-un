@@ -2,211 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.default-side {
-  opacity: 0;
-  display: none;
-}
-.default-current {
-  transform: scale(1.1);
-  justify-content: center;
-}
-
-.slideIn {
-    position: fixed;
-    top: 0;
-    animation: slideIn 0.25s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.slideOut {
-    position: fixed;
-    top: 0;
-    animation: slideOut 0.25s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.hidden-sideBar {
-    top: 0;
-    position: fixed;
-    display: none;
-}
-
-.sideBar {
-  position: sticky;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  top: 0px;
-  background-color: white;
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  z-index: 9999;
-}
-
-.default-element {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    -webkit-transition: transform 0.25s ease-in-out,
-                        background-color 0.25s ease-in-out,
-                        color 0.25s ease-in-out;
-    -moz-transition: transform 0.25s ease-in-out,
-                    background-color 0.25s ease-in-out,
-                    color 0.25s ease-in-out;
-    -o-transition: transform 0.25s ease-in-out,
-                  background-color 0.25s ease-in-out,
-                  color 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out,
-                background-color 0.25s ease-in-out,
-                color 0.25s ease-in-out;
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0.8;
-        transform: translate(-30rem, 0);
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideOut {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-    100% {
-        opacity: 0.8;
-        transform: translate(-30rem, 0);
-    }
-}
-
-@keyframes leftFadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1.1);
-    transform: translate(-19rem, 0rem);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-    
-  }
-}
-
-@keyframes leftFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(19rem, 0rem);
-  }
-}
-
-@keyframes rightFadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1.1);
-    transform: translate(19rem, 0rem);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-}
-
-@keyframes rightFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-19rem, 0rem);
-  }
-}
-
-.rightToggleOut {
-  animation: rightFadeOut 2s;
-  animation-fill-mode: forwards;
-  transform: scale(1.1);
-  
-}
-
-.rightToggleIn {
-  animation: rightFadeIn 2s;
-  animation-fill-mode: forwards;
-  z-index: 10;
- 
-}
-
-.leftToggleIn {
-  animation: leftFadeIn 2s;
-  animation-fill-mode: forwards;
-  z-index: 10;
-  
-}
-
-.leftToggleOut {
-  animation: leftFadeOut 2s;
-  animation-fill-mode: forwards;
-  transform: scale(1.1);
-}
-
-@keyframes newFade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.newFadeRightIn {
-  animation: newFade 1s;
-  animation-fill-mode: forwards;
-  opacity: 1;
-  z-index: 10;
-}
-
-.default-modal {
-  display: none;
-}
-
-.modal-fade-in {
-  position: fixed;
-  z-index: 10000;
-  animation: fadeIn 1.5s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.teamSlides {
-  -webkit-transition: transform 0.5s ease-in-out;
-  -moz-transition: transform 0.5s ease-in-out;
-  -o-transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  animation: slideInFromBottom 1.5s ease-out;
-} 
-
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translate(0, 20rem);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
+/* event.js */
 .event {
   overflow: hidden;
   display: flex;
@@ -216,96 +12,9 @@
   -o-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
 }
+/* end of event.js */
 
-.embla__viewport {
-  overflow: hidden;
-  width: 100%;
-}
-
-.embla__viewport.is-draggable {
-  cursor: move;
-  cursor: grab;
-}
-
-.embla__viewport.is-dragging {
-  cursor: grabbing;
-}
-
-.embla__container {
-  display: flex;
-  user-select: none;
-  width: 98vw;
-}
-
-.embla__slide {
-  position: relative;
-  min-width: 100%;
-}
-
-.embla__button--prev {
-  left: 15px;
-}
-
-.embla__button--next {
-  right: 15px;
-}
-
-.embla__button__svg {
-  width: 100%;
-  height: 100%;
-}
-
-.embla__button {
-  position: absolute;
-  outline: 0;
-  cursor: pointer;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 35px;
-  touch-action: manipulation;
-  z-index: 50;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 0;
-  width: 38px;
-  height: 38px;
-  justify-content: center;
-  align-items: center;
-  fill: white;
-  padding: 5px;
-  transition: all 0.3s ease-in;
-}
-
-.embla__button--prev:hover {
-  background-color: rgba(0,0,0,0.8);;
-}
-
-.embla__button--next:hover {
-  background-color: rgba(0,0,0,0.8);;
-}
-
-.embla__button:disabled {
-  cursor: default;
-  opacity: 0.3;
-}
-
-.word1 {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.word2 {
-  opacity: 0;
-  animation: fadeIn 1s 1s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.word3 {
-  opacity: 0;
-  animation: fadeIn 1s 2s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
+/* index.js */
 .joinUsButton {
   opacity: 0;
   padding-left: 4rem;
@@ -327,19 +36,234 @@
   transition-duration: 1s ease-in-out;
 }
 
-.multi-image-slider {
+.multiImageSlider {
   height: 24rem;
   padding: 2rem 2rem 2rem 2rem;
 }
 
+.word1 {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.word2 {
+  opacity: 0;
+  animation: fadeIn 1s 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.word3 {
+  opacity: 0;
+  animation: fadeIn 1s 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+/* end of index.js */
+
+/* navbar.js */
+.hiddenSideBar {
+  top: 0;
+  position: fixed;
+  display: none;
+}
+
+.sideBar {
+  position: sticky;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  top: 0px;
+  background-color: white;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  z-index: 9999;
+}
+
+.sideBarElement {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    -webkit-transition: transform 0.25s ease-in-out,
+                        background-color 0.25s ease-in-out,
+                        color 0.25s ease-in-out;
+    -moz-transition: transform 0.25s ease-in-out,
+                    background-color 0.25s ease-in-out,
+                    color 0.25s ease-in-out;
+    -o-transition: transform 0.25s ease-in-out,
+                  background-color 0.25s ease-in-out,
+                  color 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out,
+                background-color 0.25s ease-in-out,
+                color 0.25s ease-in-out;
+}
+
+.slideIn {
+    position: fixed;
+    top: 0;
+    animation: slideIn 0.25s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.slideOut {
+    position: fixed;
+    top: 0;
+    animation: slideOut 0.25s ease-in-out;
+    animation-fill-mode: forwards;
+}
+/* end of navbar.js */
+
+/* post.js */
+.defaultModal{
+  display: none;
+}
+
+.modalFadeIn {
+  position: fixed;
+  z-index: 10000;
+  animation: fadeIn 1.5s;
+}
+/*end of post.js */
+
+/* singleImageSlider.js */
+.embla__container {
+  display: flex;
+  user-select: none;
+  width: 98vw;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 100%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+/* end of singeImageSlider.js */
+
+/* singleImageSliderButtons.js */
+.embla__button {
+  position: absolute;
+  outline: 0;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 35px;
+  touch-action: manipulation;
+  z-index: 50;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 38px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  fill: white;
+  padding: 5px;
+  transition: all 0.3s ease-in;
+}
+.embla__button--next {
+  right: 15px;
+}
+
+.embla__button--prev {
+  left: 15px;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.embla__button--prev:hover {
+  background-color: rgba(0,0,0,0.8);;
+}
+
+.embla__button--next:hover {
+  background-color: rgba(0,0,0,0.8);;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+/* end of singleImageSliderButtons.js */
+
+/* teamMember.js */
+.teamSlides {
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  animation: slideInFromBottom 1.5s ease-out;
+} 
+/* end of teamMember.js */
+
+/* keyframes */
+
+/* keyframe to fade in an element from 0% to 100% */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* keyframe to slide in an element from the left */
+@keyframes slideIn {
+  0% {
+      opacity: 0.8;
+      transform: translate(-30rem, 0);
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* keyframe to slide in an element from the bottom */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* keyframe to slide out an element to the right */
+@keyframes slideOut {
+  0% {
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+  100% {
+      opacity: 0.8;
+      transform: translate(-30rem, 0);
+  }
+}
+/* end of animations and keyframes */
+
+
+/* responsive */
 @media only screen and (max-width: 640px) {
-  .multi-image-slider {
+  .multiImageSlider{
     display: none;
   }
 }
 
 @media only screen and (min-width: 640px) {
-  .default-element:hover {
+  .sideBarElement:hover {
       transform: scale(1.05);
       background-color: #Caeefb;
       color: black;
@@ -350,7 +274,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .multi-image-slider {
+  .multiImageSlider {
     height: 18rem;
   }
 }
@@ -360,4 +284,4 @@
     transform: scale(1.3);
   }
 }
-
+/* end of responsive */

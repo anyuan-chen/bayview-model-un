@@ -24,6 +24,7 @@ export default function About({ data }) {
       ></Post>
     );
   });
+  
   return (
     <div className="flex flex-col">
       <Navbar></Navbar>

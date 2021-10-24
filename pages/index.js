@@ -39,7 +39,7 @@ export default function Home() {
               Join Us
             </button>
           </div>
-          <div className="multi-image-slider">
+          <div className="multiImageSlider">
             <MultiImageSlider></MultiImageSlider>
           </div>
           <div className="flex flex-col items-center h-96 bg-white space-evenly justify-evenly sm:hidden">
