@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
 export default function Contact() {
   const sendToEmail = async (event) => {
     // TODO need to fix
@@ -10,11 +11,15 @@ export default function Contact() {
     setName("");
     setSubject("");
     setMessage("");
+    setShowModal(true);
   };
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [showModal, setShowModal]= useState(false);
+
   const fetcher = (url) =>
     fetch(url, {
       method: "POST",
@@ -29,9 +34,20 @@ export default function Contact() {
       }),
     }).then((res) => res.json());
 
+  const getClassName = () => {
+    return showModal? "visible" : "hidden";
+  }  
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" onClick={() => setShowModal(false)}>
       <Navbar></Navbar>
+      <div className={getClassName()}>
+        <Modal 
+          caption="Message sent!"
+          message="Your message has been delivered and we will get back to you as soon as possible."
+        >
+        </Modal>
+      </div>
       <div className="text-white bg-main flex justify-start pl-10 py-10 sm:justify-center sm:pl-0">
         <h1 className="bold text-4xl pb-6">Contact</h1>
       </div>

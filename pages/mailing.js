@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
 import useSWR from "swr";
 
 export default function Mailing() {
@@ -11,12 +12,15 @@ export default function Mailing() {
     setEmail("");
     setstuNum("");
     setGrade("");
+    setShowModal(true);
   };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [stuNum, setstuNum] = useState("");
   const [grade, setGrade] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  
   const fetcher = (url) =>
     fetch(url, {
       method: "POST",
@@ -31,10 +35,21 @@ export default function Mailing() {
         grade: grade,
       }),
     }).then((res) => res.json());
+
+  const getClassName = () => {
+    return showModal? "visible" : "hidden";
+  }
     
   return (
-    <div className="h-screen md:w-screen md:fixed">
+    <div className="h-screen md:w-screen md:fixed" onClick={() => setShowModal(false)}>
       <Navbar></Navbar>
+      <div className={getClassName()}>
+        <Modal 
+          caption="Email confirmed!"
+          message="You have been added to our mailing list and will hear from us soon."
+        >
+        </Modal>
+      </div>
       <div className="grid md:grid-cols-2">
         <div className="bg-main h-full text-white font-body flex flex-col px-8 pt-16 pb-10 md:h-screen lg:px-20 lg:pt-36">
           <h1 className="text-3xl font-bold">Join Our Mailing List</h1>
