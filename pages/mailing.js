@@ -33,7 +33,7 @@ export default function Mailing() {
     }).then((res) => res.json());
     
   return (
-    <div className="h-screen">
+    <div className="h-screen md:w-screen md:fixed">
       <Navbar></Navbar>
       <div className="grid md:grid-cols-2">
         <div className="bg-main h-full text-white font-body flex flex-col px-8 pt-16 pb-10 md:h-screen lg:px-20 lg:pt-36">
